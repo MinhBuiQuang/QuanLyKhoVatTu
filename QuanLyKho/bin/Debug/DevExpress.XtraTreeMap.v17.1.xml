@@ -1692,16 +1692,6 @@
 
 
         </member>
-        <member name="P:DevExpress.XtraTreeMap.TreeMapControl.Groups">
-            <summary>
-                <para>Returns the collection of groups that a TreeMap control generates.
-</para>
-            </summary>
-            <value>The collection of objects that provide information about groups which the TreeMap control generates.
-</value>
-
-
-        </member>
         <member name="P:DevExpress.XtraTreeMap.TreeMapControl.GroupStyle">
             <summary>
                 <para>Returns the style of tree map group items.
@@ -1819,16 +1809,6 @@
 		A <see cref="T:System.IO.Stream"/> descendant to which the chart's layout should be written.
 
             </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraTreeMap.TreeMapControl.SelectedGroups">
-            <summary>
-                <para>Returns information about groups that are currently selected within a TreeMap.
-</para>
-            </summary>
-            <value>The collection of paths of selected groups.
-</value>
 
 
         </member>

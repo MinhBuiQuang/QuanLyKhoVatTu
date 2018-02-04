@@ -503,7 +503,7 @@
         <member name="T:DevExpress.XtraMap.SvgExportOptions">
 
             <summary>
-                <para>The options to be applied when exporting the vector layer to the SVG file format.
+                <para>Stores options to be applied when exporting the map to a SVG file.
 </para>
             </summary>
 
@@ -1163,14 +1163,6 @@
 
 
         </member>
-        <member name="P:DevExpress.XtraMap.OsmAddress.CityDistrict">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.XtraMap.OsmAddress.Country">
             <summary>
                 <para>Gets or sets the country to specify the location address.
@@ -1201,14 +1193,6 @@
 
 
         </member>
-        <member name="P:DevExpress.XtraMap.OsmAddress.CountyDistrict">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.XtraMap.OsmAddress.HouseNumber">
             <summary>
                 <para>Gets or sets the house number to specify the location address.
@@ -1229,14 +1213,6 @@
 
 
         </member>
-        <member name="P:DevExpress.XtraMap.OsmAddress.River">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.XtraMap.OsmAddress.Road">
             <summary>
                 <para>Gets or sets the road name to specify an address.
@@ -1244,30 +1220,6 @@
             </summary>
             <value>A <see cref="T:System.String"/> value.
 </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.OsmAddress.State">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.OsmAddress.StateDistrict">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.OsmAddress.Suburb">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
 
 
         </member>
@@ -2095,6 +2047,311 @@
 </para>
             </summary>
             <value>A <see cref="T:System.Byte"/> value.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraMap.Ellipsoid">
+
+            <summary>
+                <para>This class represents an ellipsoid used to build a projected coordinate system.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraMap.Ellipsoid.AustralianNational66">
+            <summary>
+                <para>Returns the Australian National (1966) ellipsoid.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraMap.Ellipsoid.CreateBySemimajorAndInverseFlattering(System.Double,System.Double,System.String)">
+            <summary>
+                <para>Initializes an instance of Ellipsoid class using a semimajor axis and inverse flattering values.
+
+</para>
+            </summary>
+            <param name="semimajor">
+		A <see cref="T:System.Double"/> object specifying a semimajor axis value.
+
+            </param>
+            <param name="inverseFlattering">
+		A <see cref="T:System.Double"/> object specifying an inverse flattering value.
+
+            </param>
+            <param name="name">
+		A <see cref="T:System.String"/> object specifying the name of an ellipsoid.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraMap.Ellipsoid.CreateBySemimajorAndInverseFlattering(System.Double,System.Double)">
+            <summary>
+                <para>Initializes an instance of Ellipsoid class using a semimajor axis and inverse flattering values.
+
+</para>
+            </summary>
+            <param name="semimajor">
+		A <see cref="T:System.Double"/> object specifying a semimajor axis value.
+
+            </param>
+            <param name="inverseFlattering">
+		A <see cref="T:System.Double"/> object specifying an inverse flattering value.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraMap.Ellipsoid.CreateByTwoAxes(System.Double,System.Double,System.String)">
+            <summary>
+                <para>Initializes an instance of Ellipsoid class using semimajor and semiminor axis values.
+
+</para>
+            </summary>
+            <param name="semimajor">
+		A <see cref="T:System.Double"/> object specifying a semimajor axis value.
+
+            </param>
+            <param name="semiminor">
+		A <see cref="T:System.Double"/> object specifying a semiminor axis value.
+
+            </param>
+            <param name="name">
+		A <see cref="T:System.String"/> object specifying the name of an ellipsoid.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraMap.Ellipsoid.CreateByTwoAxes(System.Double,System.Double)">
+            <summary>
+                <para>Initializes an instance of Ellipsoid class using semimajor and semiminor axis values.
+
+</para>
+            </summary>
+            <param name="semimajor">
+		A <see cref="T:System.Double"/> object specifying a semimajor axis value.
+
+            </param>
+            <param name="semiminor">
+		A <see cref="T:System.Double"/> object specifying a semiminor axis value.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.Ellipsoid.Flattening">
+            <summary>
+                <para>Returns the flattering value of an ellipsoid.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Double"/> object.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraMap.Ellipsoid.GetPredefinedEllipsoids">
+            <summary>
+                <para>Returns an array of predefined ellipsoids.
+</para>
+            </summary>
+            <returns>An array of <see cref="T:DevExpress.XtraMap.Ellipsoid"/> objects, which represent predefined ellipsoids.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.Ellipsoid.GRS67">
+            <summary>
+                <para>Returns the GRS-67 ellipsoid.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.Ellipsoid.GRS80">
+            <summary>
+                <para>Returns the <a href="http://en.wikipedia.org/wiki/GRS_80">GRS-80</a> ellipsoid.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.Ellipsoid.GSK11">
+            <summary>
+                <para>Returns the GSK-2011 ellipsoid.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.Ellipsoid.IERS03">
+            <summary>
+                <para>Returns the IERS (2003) ellipsoid.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.Ellipsoid.IERS89">
+            <summary>
+                <para>Returns the <a href="http://en.wikipedia.org/wiki/International_Earth_Rotation_and_Reference_Systems_Service
+">IERS (2003)</a> ellipsoid.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.Ellipsoid.InverseFlattening">
+            <summary>
+                <para>Returns the inverse flattering value of the ellipsoid.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Double"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.Ellipsoid.Krassovsky">
+            <summary>
+                <para>Returns the Krassovsky (1940) ellipsoid.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.Ellipsoid.Name">
+            <summary>
+                <para>Gets or sets the name of an ellipsoid.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.Ellipsoid.NewInternational67">
+            <summary>
+                <para>Returns the New International (1967) ellipsoid.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.Ellipsoid.PZ90">
+            <summary>
+                <para>Returns the PZ-90 ellipsoid.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.Ellipsoid.SemimajorAxis">
+            <summary>
+                <para>Returns the semimajor axis value of an ellipsoid.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Double"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.Ellipsoid.SemiminorAxis">
+            <summary>
+                <para>Returns the semiminor axis value of an ellipsoid.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Double"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.Ellipsoid.SouthAmerican69">
+            <summary>
+                <para>Returns the South American (1969) ellipsoid.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.Ellipsoid.SquareOfEccentricity">
+            <summary>
+                <para>Returns the square of eccentricity value of an ellipsoid.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Double"/> object.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraMap.Ellipsoid.ToString">
+            <summary>
+                <para>Returns the textual representation of the Ellipsoid.
+
+</para>
+            </summary>
+            <returns>A <see cref="T:System.String"/> value which is the textual representation of the Ellipsoid.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.Ellipsoid.WGS66">
+            <summary>
+                <para>Returns the <a href="http://en.wikipedia.org/wiki/World_Geodetic_System#The_United_States_Department_of_Defense_World_Geodetic_System_1966">WGS66</a> ellipsoid.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.Ellipsoid.WGS72">
+            <summary>
+                <para>Returns the <a href="http://en.wikipedia.org/wiki/World_Geodetic_System#The_United_States_Department_of_Defense_World_Geodetic_System_1972">WGS-72</a> ellipsoid.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.Ellipsoid.WGS84">
+            <summary>
+                <para>Returns the <a href="http://en.wikipedia.org/wiki/World_Geodetic_System#A_new_World_Geodetic_System:_WGS_84">WGS-84</a> ellipsoid.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
 </value>
 
 
@@ -3693,16 +3950,6 @@
 
 
         </member>
-        <member name="P:DevExpress.XtraMap.ShpExportOptions.DbfEncoding">
-            <summary>
-                <para>Gets or sets the encoding of the <b>dbf</b> file.
-</para>
-            </summary>
-            <value>The encoding of the <b>dbf</b> file.
-</value>
-
-
-        </member>
         <member name="P:DevExpress.XtraMap.ShpExportOptions.ExportToDbf">
             <summary>
                 <para>Gets or sets a value indicating whether attribute values be exported to a <b>DBF</b> file.
@@ -4009,311 +4256,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraMap.Ellipsoid">
-
-            <summary>
-                <para>This class represents an ellipsoid used to build a projected coordinate system.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraMap.Ellipsoid.AustralianNational66">
-            <summary>
-                <para>Returns the Australian National (1966) ellipsoid.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraMap.Ellipsoid.CreateBySemimajorAndInverseFlattering(System.Double,System.Double,System.String)">
-            <summary>
-                <para>Initializes an instance of Ellipsoid class using a semimajor axis and inverse flattering values.
-
-</para>
-            </summary>
-            <param name="semimajor">
-		A <see cref="T:System.Double"/> object specifying a semimajor axis value.
-
-            </param>
-            <param name="inverseFlattering">
-		A <see cref="T:System.Double"/> object specifying an inverse flattering value.
-
-            </param>
-            <param name="name">
-		A <see cref="T:System.String"/> object specifying the name of an ellipsoid.
-
-            </param>
-            <returns>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraMap.Ellipsoid.CreateBySemimajorAndInverseFlattering(System.Double,System.Double)">
-            <summary>
-                <para>Initializes an instance of Ellipsoid class using a semimajor axis and inverse flattering values.
-
-</para>
-            </summary>
-            <param name="semimajor">
-		A <see cref="T:System.Double"/> object specifying a semimajor axis value.
-
-            </param>
-            <param name="inverseFlattering">
-		A <see cref="T:System.Double"/> object specifying an inverse flattering value.
-
-            </param>
-            <returns>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraMap.Ellipsoid.CreateByTwoAxes(System.Double,System.Double,System.String)">
-            <summary>
-                <para>Initializes an instance of Ellipsoid class using semimajor and semiminor axis values.
-
-</para>
-            </summary>
-            <param name="semimajor">
-		A <see cref="T:System.Double"/> object specifying a semimajor axis value.
-
-            </param>
-            <param name="semiminor">
-		A <see cref="T:System.Double"/> object specifying a semiminor axis value.
-
-            </param>
-            <param name="name">
-		A <see cref="T:System.String"/> object specifying the name of an ellipsoid.
-
-            </param>
-            <returns>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraMap.Ellipsoid.CreateByTwoAxes(System.Double,System.Double)">
-            <summary>
-                <para>Initializes an instance of Ellipsoid class using semimajor and semiminor axis values.
-
-</para>
-            </summary>
-            <param name="semimajor">
-		A <see cref="T:System.Double"/> object specifying a semimajor axis value.
-
-            </param>
-            <param name="semiminor">
-		A <see cref="T:System.Double"/> object specifying a semiminor axis value.
-
-            </param>
-            <returns>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.Ellipsoid.Flattening">
-            <summary>
-                <para>Returns the flattering value of an ellipsoid.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Double"/> object.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraMap.Ellipsoid.GetPredefinedEllipsoids">
-            <summary>
-                <para>Returns an array of predefined ellipsoids.
-</para>
-            </summary>
-            <returns>An array of <see cref="T:DevExpress.XtraMap.Ellipsoid"/> objects, which represent predefined ellipsoids.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.Ellipsoid.GRS67">
-            <summary>
-                <para>Returns the GRS-67 ellipsoid.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.Ellipsoid.GRS80">
-            <summary>
-                <para>Returns the <a href="http://en.wikipedia.org/wiki/GRS_80">GRS-80</a> ellipsoid.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.Ellipsoid.GSK11">
-            <summary>
-                <para>Returns the GSK-2011 ellipsoid.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.Ellipsoid.IERS03">
-            <summary>
-                <para>Returns the IERS (2003) ellipsoid.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.Ellipsoid.IERS89">
-            <summary>
-                <para>Returns the <a href="http://en.wikipedia.org/wiki/International_Earth_Rotation_and_Reference_Systems_Service
-">IERS (2003)</a> ellipsoid.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.Ellipsoid.InverseFlattening">
-            <summary>
-                <para>Returns the inverse flattering value of the ellipsoid.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Double"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.Ellipsoid.Krassovsky">
-            <summary>
-                <para>Returns the Krassovsky (1940) ellipsoid.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.Ellipsoid.Name">
-            <summary>
-                <para>Gets or sets the name of an ellipsoid.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.Ellipsoid.NewInternational67">
-            <summary>
-                <para>Returns the New International (1967) ellipsoid.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.Ellipsoid.PZ90">
-            <summary>
-                <para>Returns the PZ-90 ellipsoid.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.Ellipsoid.SemimajorAxis">
-            <summary>
-                <para>Returns the semimajor axis value of an ellipsoid.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Double"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.Ellipsoid.SemiminorAxis">
-            <summary>
-                <para>Returns the semiminor axis value of an ellipsoid.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Double"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.Ellipsoid.SouthAmerican69">
-            <summary>
-                <para>Returns the South American (1969) ellipsoid.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.Ellipsoid.SquareOfEccentricity">
-            <summary>
-                <para>Returns the square of eccentricity value of an ellipsoid.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Double"/> object.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraMap.Ellipsoid.ToString">
-            <summary>
-                <para>Returns the textual representation of the Ellipsoid.
-
-</para>
-            </summary>
-            <returns>A <see cref="T:System.String"/> value which is the textual representation of the Ellipsoid.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.Ellipsoid.WGS66">
-            <summary>
-                <para>Returns the <a href="http://en.wikipedia.org/wiki/World_Geodetic_System#The_United_States_Department_of_Defense_World_Geodetic_System_1966">WGS66</a> ellipsoid.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.Ellipsoid.WGS72">
-            <summary>
-                <para>Returns the <a href="http://en.wikipedia.org/wiki/World_Geodetic_System#The_United_States_Department_of_Defense_World_Geodetic_System_1972">WGS-72</a> ellipsoid.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.Ellipsoid.WGS84">
-            <summary>
-                <para>Returns the <a href="http://en.wikipedia.org/wiki/World_Geodetic_System#A_new_World_Geodetic_System:_WGS_84">WGS-84</a> ellipsoid.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraMap.Ellipsoid"/> object.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraMap.UTMCartesianToGeoConverter">
 
             <summary>
@@ -4405,7 +4347,7 @@
                 <para>Returns the scale factor used to convert the UTM projected coordinate system to the geographic coordinate system.
 </para>
             </summary>
-            <value>The scale factor.
+            <value>A <see cerf="T:System.Double"/> object.
 </value>
 
 
@@ -4495,38 +4437,6 @@
                 <para>Initializes a new instance of the TransverseMercatorCartesianToGeoConverter class with default settings.
 </para>
             </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraMap.TransverseMercatorCartesianToGeoConverter.#ctor(DevExpress.XtraMap.Ellipsoid,System.Double,System.Double,DevExpress.XtraMap.GeoPoint,System.Double,System.Double)">
-            <summary>
-                <para>Initializes new instance of the TransverseMercatorCartesianToGeoConverter class with the specified parameters.
-</para>
-            </summary>
-            <param name="ellipsoid">
-		The ellipsoid used to convert a Cartesian coordinate system to the geographic coordinate system. 
-
-            </param>
-            <param name="falseEasting">
-		The false easting used to convert a Cartesian coordinate system to the geographic coordinate system. 
-
-            </param>
-            <param name="falseNorthing">
-		The false northing used to convert a Cartesian coordinate system to the geographic coordinate system.
-
-            </param>
-            <param name="projectionCenter">
-		The central meridian and the latitude of the projection's origin used to convert a Cartesian coordinate system to the geographic coordinate system.
-
-            </param>
-            <param name="scaleFactor">
-		The scale factor used to convert the projected Transverse Mercator projected coordinate system to the geographic coordinate system.
-
-            </param>
-            <param name="primeMeridian">
-		The prime meridian of the Geo coordinate system.
-
-            </param>
 
 
         </member>
@@ -4662,42 +4572,6 @@
 
 
         </member>
-        <member name="M:DevExpress.XtraMap.LambertConformalConicCartesianToGeoConverter.#ctor(DevExpress.XtraMap.Ellipsoid,System.Double,System.Double,DevExpress.XtraMap.GeoPoint,System.Double,System.Double,System.Double)">
-            <summary>
-                <para>Initializes a new instance of the LambertConformalConicCartesianToGeoConverter class with the specified parameters.
-</para>
-            </summary>
-            <param name="ellipsoid">
-		The ellipsoid used to convert a Cartesian coordinate system to the geographic coordinate system. 
-
-            </param>
-            <param name="falseEasting">
-		The false easting used to convert a Cartesian coordinate system to the geographic coordinate system. 
-
-            </param>
-            <param name="falseNorthing">
-		The false northing used to convert a Cartesian coordinate system to the geographic coordinate system. 
-
-            </param>
-            <param name="projectionCenter">
-		The central meridian and the latitude of the projection's origin used to convert a Cartesian coordinate system to the geographic coordinate system.
-
-            </param>
-            <param name="standardParallelN">
-		The value of the north standard parallel.
-
-            </param>
-            <param name="standardParallelS">
-		The value of the south standard parallel.
-
-            </param>
-            <param name="primeMeridian">
-		The prime meridian of the Geo coordinate system.
-
-            </param>
-
-
-        </member>
         <member name="M:DevExpress.XtraMap.LambertConformalConicCartesianToGeoConverter.ToString">
             <summary>
                 <para>Returns the textual representation of the LambertConformalConicCartesianToGeoConverter.
@@ -4742,16 +4616,6 @@
 </para>
             </summary>
             <value>A <see cref="T:System.Double"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.EllipsoidBasedCartesianToGeoConverter.PrimeMeridian">
-            <summary>
-                <para>Gets or sets the prime meridian of the coordinate system to which the Cartesian system is converted.
-</para>
-            </summary>
-            <value>The prime meridian.
 </value>
 
 
@@ -4841,42 +4705,6 @@
                 <para>Initializes a new instance of the AlbersEqualAreaConticCartesianToGeoConverter class with default settings.
 </para>
             </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraMap.AlbersEqualAreaConticCartesianToGeoConverter.#ctor(DevExpress.XtraMap.Ellipsoid,System.Double,System.Double,DevExpress.XtraMap.GeoPoint,System.Double,System.Double,System.Double)">
-            <summary>
-                <para>Initializes a new instance of the AlbersEqualAreaConticCartesianToGeoConverter class with the specified parameters.
-</para>
-            </summary>
-            <param name="ellipsoid">
-		The ellipsoid used to convert a Cartesian coordinate system to the geographic coordinate system. 
-
-            </param>
-            <param name="falseEasting">
-		The false easting used to convert a Cartesian coordinate system to the geographic coordinate system. 
-
-            </param>
-            <param name="falseNorthing">
-		The false northing used to convert a Cartesian coordinate system to the geographic coordinate system.
-
-            </param>
-            <param name="projectionCenter">
-		The central meridian and the latitude of the projection's origin used to convert a Cartesian coordinate system to the geographic coordinate system.
-
-            </param>
-            <param name="standardParallelN">
-		The value of the north standard parallel.
-
-            </param>
-            <param name="standardParallelS">
-		The value of the south standard parallel.
-
-            </param>
-            <param name="primeMeridian">
-		The prime meridian of the Geo coordinate system.
-
-            </param>
 
 
         </member>
@@ -7131,14 +6959,6 @@
 
 
         </member>
-        <member name="P:DevExpress.XtraMap.BingAddress.CountryRegionIso2">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.XtraMap.BingAddress.District">
             <summary>
                 <para>Gets or sets the district (second or higher subdivision name within the country) of the address information obtained from Bing GIS services.
@@ -7158,14 +6978,6 @@
             </summary>
             <value>A <see cref="T:System.String"/> object.
 </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.BingAddress.Neighborhood">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
 
 
         </member>
@@ -10558,6 +10370,144 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraMap.IMapItemFactory">
+
+            <summary>
+                <para>Provides a method for creating map items. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraMap.IMapItemFactory.CreateMapItem(DevExpress.XtraMap.MapItemType,System.Object)">
+            <summary>
+                <para>If implemented by a class, creates a map item of the specified type. 
+</para>
+            </summary>
+            <param name="type">
+		A <see cref="T:DevExpress.XtraMap.MapItemType"/> enumeration value specifying the type of the created map item. 
+
+            </param>
+            <param name="obj">
+		A <see cref="T:System.Object"/> specifying the object.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraMap.MapItem"/> object which represents a map item of the specified type. 
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.XtraMap.MapItemType">
+
+            <summary>
+                <para>Lists the types of a map item. 
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraMap.MapItemType.Bubble">
+            <summary>
+                <para>Represents a Bubble chart.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraMap.MapItemType.Callout">
+            <summary>
+                <para>Represents a map callout. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraMap.MapItemType.Custom">
+            <summary>
+                <para>Represents a map custom element. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraMap.MapItemType.Dot">
+            <summary>
+                <para>Represents a map dot.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraMap.MapItemType.Ellipse">
+            <summary>
+                <para>Represents a map ellipse.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraMap.MapItemType.Line">
+            <summary>
+                <para>Represents a map line.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraMap.MapItemType.Path">
+            <summary>
+                <para>Represents a map path.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraMap.MapItemType.Pie">
+            <summary>
+                <para>Represents a Pie chart.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraMap.MapItemType.Polygon">
+            <summary>
+                <para>Represents a map polygon.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraMap.MapItemType.Polyline">
+            <summary>
+                <para>Represents a map polyline.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraMap.MapItemType.Pushpin">
+            <summary>
+                <para>Represents a map pushpin.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraMap.MapItemType.Rectangle">
+            <summary>
+                <para>Represents a map rectangle.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraMap.MapItemType.Unknown">
+            <summary>
+                <para>Represents an unknown map item type.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraMap.TextAlignment">
 
             <summary>
@@ -13424,7 +13374,7 @@
         </member>
         <member name="M:DevExpress.XtraMap.BingRouteDataProvider.CalculateRoutesFromMajorRoads(DevExpress.XtraMap.RouteWaypoint)">
             <summary>
-                <para>Returns driving routes to a location from major roads in four directions (West, North, East and South).
+                <para>Calculates a few of the most optimal routes from major roads to the specified destination point.
 </para>
             </summary>
             <param name="destination">
@@ -13436,7 +13386,7 @@
         </member>
         <member name="M:DevExpress.XtraMap.BingRouteDataProvider.CalculateRoutesFromMajorRoads(DevExpress.XtraMap.RouteWaypoint,System.Object)">
             <summary>
-                <para>Returns driving routes to a location from major roads in four directions (West, North, East and South).
+                <para>Calculates a few of the most optimal routes from major roads to the specified destination point for the specified user state.
 </para>
             </summary>
             <param name="destination">
@@ -13452,7 +13402,7 @@
         </member>
         <member name="M:DevExpress.XtraMap.BingRouteDataProvider.CalculateRoutesFromMajorRoads(DevExpress.XtraMap.RouteWaypoint,System.String,System.Object)">
             <summary>
-                <para>Returns driving routes to a location from major roads in four directions (West, North, East and South).
+                <para>Calculates a few of the most optimal routes from major roads to the specified destination point and the specified user state.
 </para>
             </summary>
             <param name="destination">
@@ -16704,6 +16654,7 @@
             <param name="filePath">
 		The path of the file that is used to save vector items.
 
+
             </param>
             <param name="scale">
 		The scale factor used to export map items to SVG.
@@ -19943,32 +19894,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraMap.IMapItemFactory">
-
-            <summary>
-                <para>Provides a method for creating map items. 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraMap.IMapItemFactory.CreateMapItem(DevExpress.XtraMap.MapItemType,System.Object)">
-            <summary>
-                <para>If implemented by a class, creates a map item of the specified type. 
-</para>
-            </summary>
-            <param name="type">
-		A <see cref="T:DevExpress.XtraMap.MapItemType"/> enumeration value specifying the type of the created map item. 
-
-            </param>
-            <param name="obj">
-		A <see cref="T:System.Object"/> specifying the object.
-
-            </param>
-            <returns>A <see cref="T:DevExpress.XtraMap.MapItem"/> object which represents a map item of the specified type. 
-</returns>
-
-
-        </member>
         <member name="T:DevExpress.XtraMap.GenericColorizer`1">
 
             <summary>
@@ -20191,118 +20116,6 @@
             </summary>
             <returns>A <see cref="T:System.String"/> value, which is the textual representation of OpenStreetMapDataProvider.
 </returns>
-
-
-        </member>
-        <member name="T:DevExpress.XtraMap.MapItemType">
-
-            <summary>
-                <para>Lists the types of a map item. 
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.XtraMap.MapItemType.Bubble">
-            <summary>
-                <para>Represents a Bubble chart.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraMap.MapItemType.Callout">
-            <summary>
-                <para>Represents a map callout. 
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraMap.MapItemType.Custom">
-            <summary>
-                <para>Represents a map custom element. 
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraMap.MapItemType.Dot">
-            <summary>
-                <para>Represents a map dot.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraMap.MapItemType.Ellipse">
-            <summary>
-                <para>Represents a map ellipse.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraMap.MapItemType.Line">
-            <summary>
-                <para>Represents a map line.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraMap.MapItemType.Path">
-            <summary>
-                <para>Represents a map path.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraMap.MapItemType.Pie">
-            <summary>
-                <para>Represents a Pie chart.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraMap.MapItemType.Polygon">
-            <summary>
-                <para>Represents a map polygon.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraMap.MapItemType.Polyline">
-            <summary>
-                <para>Represents a map polyline.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraMap.MapItemType.Pushpin">
-            <summary>
-                <para>Represents a map pushpin.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraMap.MapItemType.Rectangle">
-            <summary>
-                <para>Represents a map rectangle.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraMap.MapItemType.Unknown">
-            <summary>
-                <para>Represents an unknown map item type.
-</para>
-            </summary>
 
 
         </member>

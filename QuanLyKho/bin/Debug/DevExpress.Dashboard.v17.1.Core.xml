@@ -510,30 +510,6 @@
 
 
         </member>
-        <member name="T:DevExpress.DashboardCommon.OlapDataProviderType">
-
-            <summary>
-                <para>Lists values that specify a data provider used to connect to the <see cref="T:DevExpress.DashboardCommon.DashboardOlapDataSource"/>.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.DashboardCommon.OlapDataProviderType.Adomd">
-            <summary>
-                <para>The ADOMD.NET data provider.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.DashboardCommon.OlapDataProviderType.Xmla">
-            <summary>
-                <para>The XMLA data access standard.
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.DashboardCommon.ChartAxisY">
 
             <summary>
@@ -1347,7 +1323,7 @@
 
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> that specifies the name of the custom driver.
+            <value>A <see cref="T:System.Sting"/> that specifies the name of the custom driver.
 </value>
 
 
@@ -1357,7 +1333,7 @@
                 <para>Gets or sets the path to the file containing a data extract.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> that specifies the path to the file containing a data extract.
+            <value>A <see cref="T:System.Sting"/> that specifies the path to the file containing a data extract.
 </value>
 
 
@@ -4239,7 +4215,7 @@
 </para>
             </summary>
             <param name="items">
-		A <see cref="T:System.Collections.IEnumerable"/> object representing the collection of items to append to the collection.
+		A <see cref="T:System.Collections.Generic.IEnumerable"/> object representing the collection of items to append to the collection. 
 
             </param>
 
@@ -4287,7 +4263,7 @@
 </para>
             </summary>
             <param name="match">
-		A System.Predicate that specifies the condition used to determine whether the collection contains an item. 
+		A <see cref="T:System.Predicate"/> that specifies the condition used to determine whether the collection contains an item. 
 
             </param>
             <returns><b>true</b>, if the collection contains an item that matches the specified predicate; otherwise, <b>false</b>. 
@@ -4309,7 +4285,7 @@
 </para>
             </summary>
             <param name="match">
-		A System.Predicate that specifies the condition used to obtain the first item. 
+		A <see cref="T:System.Predicate"/> that specifies the condition used to obtain the first item. 
 
             </param>
             <returns>A T object representing the first item that matches the specified predicate. 
@@ -4335,7 +4311,7 @@
 </para>
             </summary>
             <param name="items">
-		A <see cref="T:System.Collections.IEnumerable"/> object representing the collection of items to remove from the collection.
+		A <see cref="T:System.Collections.Generic.IEnumerable"/> object representing the collection of items to remove from the collection.
 
             </param>
 
@@ -4382,39 +4358,6 @@
         <member name="F:DevExpress.DashboardCommon.DashboardExportMode.SingleItem">
             <summary>
                 <para>A specific dashboard item is being exported.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.DashboardCommon.GridColumnFixedWidthType">
-
-            <summary>
-                <para>Lists values that specify the mode used to manage the width of individual columns.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.DashboardCommon.GridColumnFixedWidthType.FitToContent">
-            <summary>
-                <para>The column has the fixed width required to completely display its content.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.DashboardCommon.GridColumnFixedWidthType.FixedWidth">
-            <summary>
-                <para>The column has a fixed width. Use the <see cref="P:DevExpress.DashboardCommon.GridColumnBase.FixedWidth"/> property to specify the fixed column width.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.DashboardCommon.GridColumnFixedWidthType.Weight">
-            <summary>
-                <para>The column has the fixed relative width. Use the <see cref="P:DevExpress.DashboardCommon.GridColumnBase.Weight"/> property to specify the column relative width.
 </para>
             </summary>
 
@@ -4472,77 +4415,64 @@
         </member>
         <member name="M:DevExpress.DashboardCommon.RangeFilterState.#ctor(System.String)">
             <summary>
-                <para>Initializes a new instance of the RangeFilterState class.
-</para>
+                <para> </para>
             </summary>
             <param name="periodName">
-		A <see cref="T:System.String"/> value that specifies the name of the selected predefined period.
-
+		 
             </param>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.RangeFilterState.#ctor(DevExpress.DashboardCommon.RangeFilterSelection)">
             <summary>
-                <para>Initializes a new instance of the RangeFilterState class.
-</para>
+                <para> </para>
             </summary>
             <param name="selection">
-		A <see cref="T:DevExpress.DashboardCommon.RangeFilterSelection"/> object that specifies the selected range in the Range Filter dashboard item. 
-
+		 
             </param>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.RangeFilterState.#ctor">
             <summary>
-                <para>Initializes a new instance of the RangeFilterState class.
-</para>
+                <para> </para>
             </summary>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.RangeFilterState.LoadFromXml(System.Xml.Linq.XElement)">
             <summary>
-                <para>Loads a Range Filter state from an XML document.
-</para>
+                <para> </para>
             </summary>
             <param name="element">
-		A <see cref="T:System.Xml.Linq.XDocument"/> object that is the XML document containing a Range Filter state.
-
+		 
             </param>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.RangeFilterState.PeriodName">
             <summary>
-                <para>Gets or sets the name of the selected predefined period.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value that specifies the name of the selected predefined period.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.RangeFilterState.SaveToXml(System.Xml.Linq.XElement)">
             <summary>
-                <para>Saves the current Range Filter state to an XML document. 
-</para>
+                <para> </para>
             </summary>
             <param name="element">
-		A <see cref="T:System.Xml.Linq.XDocument"/> object that is the XML document containing the Range Filter state.
-
+		 
             </param>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.RangeFilterState.Selection">
             <summary>
-                <para>Gets or sets the selected range in the Range Filter dashboard item. 
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:DevExpress.DashboardCommon.RangeFilterSelection"/> object that specifies the selected range in the Range Filter dashboard item. 
-</value>
+            <value> </value>
 
 
         </member>
@@ -4787,55 +4717,41 @@
         </member>
         <member name="P:DevExpress.DashboardCommon.CardRowTextElementBase.FontFamily">
             <summary>
-                <para>Gets or sets the font family for a current element.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:System.String"/> that specifies the font family for a current element.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.CardRowTextElementBase.FontSize">
             <summary>
-                <para>Gets or sets a font size for the current element.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:System.Single"/> value that specifies a font size for the current element.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.CardRowTextElementBase.FontStyle">
             <summary>
-                <para>Gets or sets the style applied to text.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.FontStyle"/> value that specifies the style applied to text.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.CardRowTextElementBase.ForeColor">
             <summary>
-                <para>Gets or sets the color used to paint a current text visual element.
-
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> value that specifies the color used to paint a current text visual element.
-
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.CardRowTextElementBase.PredefinedForeColor">
             <summary>
-                <para>Gets or sets the predefined color used to paint a current text visual element.
-
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:DevExpress.DashboardCommon.CardPredefinedColor"/> value that specifies the predefined color used to paint a current text visual element.
-
-</value>
+            <value> </value>
 
 
         </member>
@@ -5260,32 +5176,26 @@
         </member>
         <member name="M:DevExpress.DashboardCommon.CardLayoutTemplateElement.LoadFromXml(System.Xml.Linq.XElement,System.String)">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
             <param name="parentElement">
 		 
-
             </param>
             <param name="xmlName">
 		 
-
             </param>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.CardLayoutTemplateElement.SaveToXml(System.Xml.Linq.XElement,System.String)">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
             <param name="parentElement">
 		 
-
             </param>
             <param name="xmlName">
 		 
-
             </param>
 
 
@@ -5390,14 +5300,6 @@
             </summary>
             <value>An integer value that specifies the minimum width of the card content in pixels.
 </value>
-
-
-        </member>
-        <member name="M:DevExpress.DashboardCommon.CardLayoutTemplate.ResetSpecificSettingsToDefault">
-            <summary>
-                <para>Resets specific template settings to their default values.
-</para>
-            </summary>
 
 
         </member>
@@ -5844,12 +5746,10 @@
         </member>
         <member name="M:DevExpress.DashboardCommon.DashboardState.LoadFromXml(System.Xml.Linq.XDocument)">
             <summary>
-                <para>Loads a dashboard state from an XML document.
-</para>
+                <para> </para>
             </summary>
             <param name="document">
-		A <see cref="T:System.Xml.Linq.XDocument"/> object that is the XML document containing a dashboard state.
-
+		 
             </param>
 
 
@@ -5866,11 +5766,9 @@
         </member>
         <member name="M:DevExpress.DashboardCommon.DashboardState.SaveToXml">
             <summary>
-                <para>Saves the current dashboard state to an XML document. 
-</para>
+                <para> </para>
             </summary>
-            <returns>A <see cref="T:System.Xml.Linq.XDocument"/> object that is the XML document containing the dashboard state.
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -5976,12 +5874,10 @@
         </member>
         <member name="M:DevExpress.DashboardCommon.DashboardItemState.LoadFromXml(System.Xml.Linq.XElement)">
             <summary>
-                <para>Loads a dashboard item state from an XML document.
-</para>
+                <para> </para>
             </summary>
             <param name="element">
-		A <see cref="T:System.Xml.Linq.XDocument"/> object that is the XML document containing a dashboard item state.
-
+		 
             </param>
 
 
@@ -6010,11 +5906,9 @@
         </member>
         <member name="M:DevExpress.DashboardCommon.DashboardItemState.SaveToXml">
             <summary>
-                <para>Saves the current dashboard item state to an XML document. 
-</para>
+                <para> </para>
             </summary>
-            <returns>A <see cref="T:System.Xml.Linq.XDocument"/> object that is the XML document containing the dashboard item state.
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -6398,6 +6292,17 @@
                 <para>Represents a list of records from the dashboard data source.
 </para>
             </summary>
+
+        </member>
+        <member name="M:DevExpress.DashboardCommon.DashboardUnderlyingDataSet.GetItemProperties(System.ComponentModel.PropertyDescriptor[])">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="listAccessors">
+		 
+            </param>
+            <returns> </returns>
+
 
         </member>
         <member name="P:DevExpress.DashboardCommon.DashboardUnderlyingDataSet.Item(System.Int32)">
@@ -7783,11 +7688,9 @@ The <i>dataMember</i> parameter should be specified for a SQL Data Source (a que
         </member>
         <member name="M:DevExpress.DashboardCommon.CardRowElementBase.ToString">
             <summary>
-                <para>Returns the string that represents the current object.
-</para>
+                <para> </para>
             </summary>
-            <returns>A <see cref="T:System.String"/> that represents the current CardRowElementBase object. 
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -10126,36 +10029,29 @@ Note that the <b>Percent</b> value type is not in effect when formatting is appl
         </member>
         <member name="M:DevExpress.DashboardCommon.DashboardConnectionErrorEventArgs.#ctor(System.String,System.String,DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase,System.Exception,DevExpress.DataAccess.Wizard.Services.IWaitFormActivator)">
             <summary>
-                <para>Initializes a new instance of the DashboardConnectionErrorEventArgs class.
-</para>
+                <para> </para>
             </summary>
             <param name="connectionName">
-		A <see cref="T:System.String"/> value that specifies the connection name.
-
+		 
             </param>
             <param name="dataSourceName">
-		A <see cref="T:System.String"/> value that specifies the data source component name.
-
+		 
             </param>
             <param name="connectionParameters">
-		A <see cref="T:DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase"/> descendant containing connection parameters.
-
+		 
             </param>
             <param name="exception">
-		A <see cref="T:System.Exception"/> object representing the exception that caused the event. 
-
+		 
             </param>
             <param name="waitFormActivator">
-		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.IWaitFormActivator"/> object.
-
+		 
             </param>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DashboardConnectionErrorEventArgs.CloseWaitForm">
             <summary>
-                <para>Closes the wait form.
-</para>
+                <para> </para>
             </summary>
 
 
@@ -10172,8 +10068,7 @@ Note that the <b>Percent</b> value type is not in effect when formatting is appl
         </member>
         <member name="M:DevExpress.DashboardCommon.DashboardConnectionErrorEventArgs.ShowWaitForm">
             <summary>
-                <para>Shows the wait form.
-</para>
+                <para> </para>
             </summary>
 
 
@@ -12035,9 +11930,7 @@ Note that the <b>Percent</b> value type is not in effect when formatting is appl
         </member>
         <member name="M:DevExpress.DashboardCommon.DashboardExtractDataSource.UpdateExtractFile(System.Threading.CancellationToken,System.String,System.String)">
             <summary>
-                <para>Updates a file containing a data extract and allows you to specify the driver used to write data to the data extract. 
-
-
+                <para>Updates a file containing a data extract and allows task cancellation through the use of a cancellation token.
 </para>
             </summary>
             <param name="cancellationToken">
@@ -12045,13 +11938,11 @@ Note that the <b>Percent</b> value type is not in effect when formatting is appl
 
             </param>
             <param name="fileName">
-		A <see cref="T:System.String"/> value that specifies the path to a file containing the data extract to be updated.
-
+		A <see cref="T:System.String"/> value that specifies the path to a file containing a data extract to be updated.
 
             </param>
             <param name="driverName">
-		A <see cref="T:System.String"/> value that specifies the name of the driver (<see cref="P:DevExpress.DashboardCommon.DashboardExtractDataSource.DriverName"/>) used to write data to the data extract.
-
+		A <see cref="T:System.String"/> value that specifies the name of a driver (<see cref="P:DevExpress.DashboardCommon.DashboardExtractDataSource.DriverName"/>) used to write data to the data extract.
 
             </param>
 
@@ -12147,11 +12038,9 @@ Note that the <b>Percent</b> value type is not in effect when formatting is appl
         </member>
         <member name="M:DevExpress.DashboardCommon.ExportFontInfo.ToString">
             <summary>
-                <para>Returns the string that represents the current object.
-</para>
+                <para> </para>
             </summary>
-            <returns>A <see cref="T:System.String"/> that represents the current ExportFontInfo object.
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -12932,16 +12821,14 @@ Note that the <b>Percent</b> value type is not in effect when formatting is appl
         </member>
         <member name="F:DevExpress.DashboardCommon.TreemapExportSizeMode.None">
             <summary>
-                <para>A Treemap dashboard item is exported in a size identical to that shown on the dashboard.
-</para>
+                <para> </para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.TreemapExportSizeMode.Zoom">
             <summary>
-                <para>A Treemap dashboard item is resized proportionally to best fit the exported page. 
-</para>
+                <para> </para>
             </summary>
 
 
@@ -12956,24 +12843,21 @@ Note that the <b>Percent</b> value type is not in effect when formatting is appl
         </member>
         <member name="F:DevExpress.DashboardCommon.RangeFilterExportSizeMode.None">
             <summary>
-                <para>A Range Filter dashboard item is exported in a size identical to that shown on the dashboard. 
-</para>
+                <para> </para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.RangeFilterExportSizeMode.Stretch">
             <summary>
-                <para>A Range Filter dashboard item is stretched or shrunk to fit the page to which it is exported. 
-</para>
+                <para> </para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.RangeFilterExportSizeMode.Zoom">
             <summary>
-                <para>A Range Filter dashboard item is resized proportionally to best fit the exported page. 
-</para>
+                <para> </para>
             </summary>
 
 
@@ -12988,16 +12872,14 @@ Note that the <b>Percent</b> value type is not in effect when formatting is appl
         </member>
         <member name="F:DevExpress.DashboardCommon.MapExportSizeMode.None">
             <summary>
-                <para>A map dashboard item is exported in a size identical to that shown on the dashboard.
-</para>
+                <para> </para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.MapExportSizeMode.Zoom">
             <summary>
-                <para>A map dashboard item is resized proportionally to best fit the exported page.
-</para>
+                <para> </para>
             </summary>
 
 
@@ -13140,55 +13022,45 @@ Note that the <b>Percent</b> value type is not in effect when formatting is appl
         </member>
         <member name="M:DevExpress.DashboardCommon.DashboardDataSourceModel.#ctor">
             <summary>
-                <para>Initializes a new instance of the DashboardDataSourceModel class.
-</para>
+                <para> </para>
             </summary>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DashboardDataSourceModel.#ctor(DevExpress.DashboardCommon.DashboardDataSourceModel)">
             <summary>
-                <para>Initializes a new instance of the DashboardDataSourceModel class.
-</para>
+                <para> </para>
             </summary>
             <param name="other">
-		A <see cref="T:DevExpress.DashboardCommon.DashboardDataSourceModel"/> object used to initialize a new instance.
-
+		 
             </param>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DashboardDataSourceModel.Clone">
             <summary>
-                <para>Creates a copy of the current DashboardDataSourceModel object.
-</para>
+                <para> </para>
             </summary>
-            <returns>A DashboardDataSourceModel object which is a copy of the current object. 
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DashboardDataSourceModel.Equals(System.Object)">
             <summary>
-                <para>Determines whether the specified object is equal to the current DashboardDataSourceModel instance.
-</para>
+                <para> </para>
             </summary>
             <param name="obj">
-		The object to compare with the current object.
-
+		 
             </param>
-            <returns><b>true</b>, if the specified object is equal to the current DashboardDataSourceModel instance; otherwise, <b>false</b>. 
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DashboardDataSourceModel.GetHashCode">
             <summary>
-                <para>Gets the hash code that corresponds to the value of the current DashboardDataSourceModel object.
-</para>
+                <para> </para>
             </summary>
-            <returns>An integer value representing the hash code for the current object.
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -13321,82 +13193,6 @@ Note that the <b>Percent</b> value type is not in effect when formatting is appl
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.DashboardCommon.Measure"/> object that provides data used to calculate the weight of series points.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.DashboardCommon.ViewerData.AxisPointTuple">
-
-            <summary>
-                <para>Represents a tuple of axis points.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.DashboardCommon.ViewerData.AxisPointTuple.AvailableAxisNames">
-            <summary>
-                <para>Gets the names of available data axes for the current AxisPointTuple.
-</para>
-            </summary>
-            <value>A list of <see cref="T:System.String"/> objects that are the names of available data axes. 
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.DashboardCommon.ViewerData.AxisPointTuple.Equals(System.Object)">
-            <summary>
-                <para>Determines whether the specified object is equal to the current AxisPointTuple instance.
-</para>
-            </summary>
-            <param name="obj">
-		The object to compare with the current object.
-
-            </param>
-            <returns><b>true</b>, if the specified object is equal to the current AxisPointTuple instance; otherwise, <b>false</b>. 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.DashboardCommon.ViewerData.AxisPointTuple.GetAxisPoint">
-            <summary>
-                <para>Gets the axis point from the current AxisPointTuple object.
-</para>
-            </summary>
-            <returns>An <see cref="T:DevExpress.DashboardCommon.ViewerData.AxisPoint"/> object that is the axis point from the current AxisPointTuple object.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.DashboardCommon.ViewerData.AxisPointTuple.GetAxisPoint(System.String)">
-            <summary>
-                <para>Gets the axis point from the current AxisPointTuple object by the specified axis name.
-</para>
-            </summary>
-            <param name="axisName">
-		A string value returned by the <see cref="T:DevExpress.DashboardCommon.DashboardDataAxisNames"/> class that specifies the name of the data axis.
-
-            </param>
-            <returns>An <see cref="T:DevExpress.DashboardCommon.ViewerData.AxisPoint"/> object that is the axis point from the current AxisPointTuple object.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.DashboardCommon.ViewerData.AxisPointTuple.GetHashCode">
-            <summary>
-                <para>Gets the hash code that corresponds to the value of the current AxisPointTuple object.
-</para>
-            </summary>
-            <returns>An integer value representing the hash code for the current object.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.DashboardCommon.ViewerData.AxisPointTuple.IsEmpty">
-            <summary>
-                <para>Gets whether or not the current AxisPointTuple object contains axis points.
-</para>
-            </summary>
-            <value><b>true</b>, if the current AxisPointTuple object does not contain axis points; otherwise, <b>false</b>.
 </value>
 
 
@@ -14136,11 +13932,9 @@ Note that the <b>Percent</b> value type is not in effect when formatting is appl
         </member>
         <member name="P:DevExpress.DashboardCommon.GridDeltaColumn.AbsoluteVariationNumericFormat">
             <summary>
-                <para>Provides access to the format settings for absolute variation values.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:DevExpress.DashboardCommon.DataItemNumericFormat"/> object that contains the format settings applied to absolute variation values.
-</value>
+            <value> </value>
 
 
         </member>
@@ -14189,21 +13983,17 @@ Note that the <b>Percent</b> value type is not in effect when formatting is appl
         </member>
         <member name="P:DevExpress.DashboardCommon.GridDeltaColumn.PercentOfTargetNumericFormat">
             <summary>
-                <para>Provides access to the format settings for percent of target values.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:DevExpress.DashboardCommon.DataItemNumericFormat"/> object that contains the format settings applied to percent of target values.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.GridDeltaColumn.PercentVariationNumericFormat">
             <summary>
-                <para>A <see cref="T:DevExpress.DashboardCommon.DataItemNumericFormat"/> object that contains the format settings applied to percent variation values.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:DevExpress.DashboardCommon.DataItemNumericFormat"/> object that contains the format settings applied to percent variation values.
-</value>
+            <value> </value>
 
 
         </member>
@@ -14767,31 +14557,25 @@ Note that the <b>Percent</b> value type is not in effect when formatting is appl
         </member>
         <member name="P:DevExpress.DashboardCommon.DeltaOptionsBase.ResultIndicationMode">
             <summary>
-                <para>Gets or sets which indication should be displayed within this delta element. 
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:DevExpress.DashboardCommon.DeltaIndicationMode"/> value that specifies which indication should be displayed within this delta element. 
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.DeltaOptionsBase.ResultIndicationThreshold">
             <summary>
-                <para>Gets or sets the precision with which actual and target values are determined to be equal (comparison tolerance). 
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:System.Decimal"/> value that specifies the precision with which actual and target values are determined to be equal. 
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.DeltaOptionsBase.ResultIndicationThresholdType">
             <summary>
-                <para>Gets or sets how the comparison tolerance (<see cref="P:DevExpress.DashboardCommon.DeltaOptionsBase.ResultIndicationThreshold"/>) is specified. 
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:DevExpress.DashboardCommon.DeltaIndicationThresholdType"/> enumeration member that defines how the comparison tolerance is specified. 
-</value>
+            <value> </value>
 
 
         </member>
@@ -14851,11 +14635,9 @@ Note that the <b>Percent</b> value type is not in effect when formatting is appl
         </member>
         <member name="P:DevExpress.DashboardCommon.KpiElement.AbsoluteVariationNumericFormat">
             <summary>
-                <para>Provides access to the format settings for absolute variation values.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:DevExpress.DashboardCommon.DataItemNumericFormat"/> object that contains the format settings applied to absolute variation values.
-</value>
+            <value> </value>
 
 
         </member>
@@ -14882,21 +14664,17 @@ Note that the <b>Percent</b> value type is not in effect when formatting is appl
         </member>
         <member name="P:DevExpress.DashboardCommon.KpiElement.PercentOfTargetNumericFormat">
             <summary>
-                <para>Provides access to the format settings for percent of target values.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:DevExpress.DashboardCommon.DataItemNumericFormat"/> object that contains the format settings applied to percent of target values.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.KpiElement.PercentVariationNumericFormat">
             <summary>
-                <para>Provides access to the format settings for percent variation values.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:DevExpress.DashboardCommon.DataItemNumericFormat"/> object that contains the format settings applied to percent variation values.
-</value>
+            <value> </value>
 
 
         </member>
@@ -15697,11 +15475,9 @@ Note that the <b>Percent</b> value type is not in effect when formatting is appl
         </member>
         <member name="P:DevExpress.DashboardCommon.DashboardOlapDataSource.OlapDataProvider">
             <summary>
-                <para>Gets or sets a data provider used to connect to the <see cref="T:DevExpress.DashboardCommon.DashboardOlapDataSource"/>.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:DevExpress.DashboardCommon.OlapDataProviderType"/> value that specifies a data provider used to connect to the <see cref="T:DevExpress.DashboardCommon.DashboardOlapDataSource"/>.
-</value>
+            <value> </value>
 
 
         </member>
@@ -16708,7 +16484,7 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
                 <para>Gets or sets the name of the custom driver used to manage writing/reading operations for the data extract. 
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> that specifies the path to the file containing a data extract. 
+            <value>A <see cref="T:System.Sting"/> that specifies the path to the file containing a data extract. 
 </value>
 
 
@@ -17545,11 +17321,9 @@ To load the custom shapefile, use the <see cref="P:DevExpress.DashboardCommon.Ma
         </member>
         <member name="P:DevExpress.DashboardCommon.DeltaMap.AbsoluteVariationNumericFormat">
             <summary>
-                <para>Provides access to the format settings for absolute variation values.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:DevExpress.DashboardCommon.DataItemNumericFormat"/> object that contains the format settings applied to absolute variation values.
-</value>
+            <value> </value>
 
 
         </member>
@@ -17597,21 +17371,17 @@ To load the custom shapefile, use the <see cref="P:DevExpress.DashboardCommon.Ma
         </member>
         <member name="P:DevExpress.DashboardCommon.DeltaMap.PercentOfTargetNumericFormat">
             <summary>
-                <para>Provides access to the format settings for percent of target values.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:DevExpress.DashboardCommon.DataItemNumericFormat"/> object that contains the format settings applied to percent of target values.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.DeltaMap.PercentVariationNumericFormat">
             <summary>
-                <para>Provides access to the format settings for percent variation values.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:DevExpress.DashboardCommon.DataItemNumericFormat"/> object that contains the format settings applied to percent variation values.
-</value>
+            <value> </value>
 
 
         </member>
@@ -18286,8 +18056,7 @@ To load the custom shapefile, use the <see cref="P:DevExpress.DashboardCommon.Ma
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.CustomItems">
             <summary>
-                <para><b>Default value:</b> Custom Items
-</para>
+                <para> </para>
             </summary>
 
 
@@ -18318,8 +18087,7 @@ To load the custom shapefile, use the <see cref="P:DevExpress.DashboardCommon.Ma
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.DashboardStatePosition">
             <summary>
-                <para><b>Default value:</b> Position
-</para>
+                <para> </para>
             </summary>
 
 
@@ -18703,14 +18471,6 @@ To load the custom shapefile, use the <see cref="P:DevExpress.DashboardCommon.Ma
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.DefaultOlapDataSourceName">
             <summary>
                 <para><b>Default value:</b> OLAP Data Source
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.DefaultPeriodName">
-            <summary>
-                <para><b>Default value:</b> Period
 </para>
             </summary>
 
@@ -19142,16 +18902,14 @@ To load the custom shapefile, use the <see cref="P:DevExpress.DashboardCommon.Ma
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ExportFilters">
             <summary>
-                <para><b>Default value:</b> Filters
-</para>
+                <para> </para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ExportParameters">
             <summary>
-                <para><b>Default value:</b> Parameters
-</para>
+                <para> </para>
             </summary>
 
 
@@ -19206,8 +18964,7 @@ To load the custom shapefile, use the <see cref="P:DevExpress.DashboardCommon.Ma
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ExtractEmptyDataMemberExceptionMessage">
             <summary>
-                <para><b>Default value:</b> Cannot create an extract file because ExtractSourceOptions.DataMember is empty or specified incorrectly.
-</para>
+                <para> </para>
             </summary>
 
 
@@ -19582,8 +19339,7 @@ To load the custom shapefile, use the <see cref="P:DevExpress.DashboardCommon.Ma
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.IncludeExportDashboardState">
             <summary>
-                <para><b>Default value:</b> Include
-</para>
+                <para> </para>
             </summary>
 
 
@@ -19663,8 +19419,7 @@ To load the custom shapefile, use the <see cref="P:DevExpress.DashboardCommon.Ma
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.MessageCustomItemIsNotSupported">
             <summary>
-                <para><b>Default value:</b> The custom item is not supported by this control.
-</para>
+                <para> </para>
             </summary>
 
 
@@ -19815,16 +19570,14 @@ To load the custom shapefile, use the <see cref="P:DevExpress.DashboardCommon.Ma
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.MessageInvalidCardLayoutTemplateMaxWidth">
             <summary>
-                <para><b>Default value:</b> The maximum width must be greater than zero or equal to null.
-</para>
+                <para> </para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.MessageInvalidCardLayoutTemplateMinWidth">
             <summary>
-                <para><b>Default value:</b> The minimum width must be greater than zero.
-</para>
+                <para> </para>
             </summary>
 
 
@@ -19839,8 +19592,7 @@ To load the custom shapefile, use the <see cref="P:DevExpress.DashboardCommon.Ma
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.MessageInvalidDeltaIndicatorSize">
             <summary>
-                <para><b>Default value:</b> The delta indicator size must be greater than zero.
-</para>
+                <para> </para>
             </summary>
 
 
@@ -19855,8 +19607,7 @@ To load the custom shapefile, use the <see cref="P:DevExpress.DashboardCommon.Ma
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.MessageInvalidFontSize">
             <summary>
-                <para><b>Default value:</b> The font size must be greater than zero.
-</para>
+                <para> </para>
             </summary>
 
 
@@ -20159,8 +19910,7 @@ To load the custom shapefile, use the <see cref="P:DevExpress.DashboardCommon.Ma
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ParameterNullExportValue">
             <summary>
-                <para><b>Default value:</b> null
-</para>
+                <para> </para>
             </summary>
 
 
@@ -21103,16 +20853,14 @@ To load the custom shapefile, use the <see cref="P:DevExpress.DashboardCommon.Ma
         </member>
         <member name="M:DevExpress.DashboardCommon.NamedDataItemContainer.BeginInit">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.NamedDataItemContainer.EndInit">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
 
 
@@ -22190,11 +21938,11 @@ To load the custom shapefile, use the <see cref="P:DevExpress.DashboardCommon.Ma
         </member>
         <member name="P:DevExpress.DashboardCommon.Dimension.GroupChildValues">
             <summary>
-                <para>Gets or sets whether to group Treemap tiles corresponding to values of the child dimension by values of the current dimension.
+                <para>Gets or sets whether to group visual elements corresponding to values of the child dimension by values of the current dimension.
 
 </para>
             </summary>
-            <value><b>true</b>, to group Treemap tiles corresponding to values of the child dimension by values of the current dimension; otherwise, <b>false</b>.
+            <value><b>true</b>, to group visual elements corresponding to values of the child dimension by values of the current dimension; otherwise, <b>false</b>.
 </value>
 
 
@@ -25367,37 +25115,25 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="P:DevExpress.DashboardCommon.DataItem.ShowGrandTotals">
             <summary>
-                <para>Gets or sets whether to show grand totals for the current measure.
-
-</para>
+                <para> </para>
             </summary>
-            <value><b>true</b>, to show grand totals for the current measure; otherwise, <b>false</b>.
-
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.DataItem.ShowTotals">
             <summary>
-                <para>Gets or sets whether to show totals for the current data item.
-
-</para>
+                <para> </para>
             </summary>
-            <value><b>true</b>, to show totals for the current data item; otherwise, <b>false</b>.
-
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.DataItem.ShowValues">
             <summary>
-                <para>Gets or sets whether to display summary values corresponding to the current measure.
-
-</para>
+                <para> </para>
             </summary>
-            <value><b>true</b>, to display summary values corresponding to the current measure; otherwise, <b>false</b>.
-
-</value>
+            <value> </value>
 
 
         </member>
@@ -27701,6 +27437,82 @@ Note that this sort order is in effect in OLAP mode only.
 
 
         </member>
+        <member name="T:DevExpress.DashboardCommon.ViewerData.AxisPointTuple">
+
+            <summary>
+                <para>Represents a tuple of axis points.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.DashboardCommon.ViewerData.AxisPointTuple.AvailableAxisNames">
+            <summary>
+                <para>Gets the names of available data axes for the current AxisPointTuple.
+</para>
+            </summary>
+            <value>A list of <see cref="T:System.String"/> objects that are the names of available data axes. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DashboardCommon.ViewerData.AxisPointTuple.Equals(System.Object)">
+            <summary>
+                <para>Determines whether the specified object is equal to the current AxisPointTuple instance.
+</para>
+            </summary>
+            <param name="obj">
+		The object to compare with the current object.
+
+            </param>
+            <returns><b>true</b>, if the specified object is equal to the current AxisPointTuple instance; otherwise, <b>false</b>. 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DashboardCommon.ViewerData.AxisPointTuple.GetAxisPoint">
+            <summary>
+                <para>Gets the axis point from the current AxisPointTuple object.
+</para>
+            </summary>
+            <returns>An <see cref="T:DevExpress.DashboardCommon.ViewerData.AxisPoint"/> object that is the axis point from the current AxisPointTuple object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DashboardCommon.ViewerData.AxisPointTuple.GetAxisPoint(System.String)">
+            <summary>
+                <para>Gets the axis point from the current AxisPointTuple object by the specified axis name.
+</para>
+            </summary>
+            <param name="axisName">
+		A string value returned by the <see cref="T:DevExpress.DashboardCommon.DashboardDataAxisNames"/> class that specifies the name of the data axis.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.DashboardCommon.ViewerData.AxisPoint"/> object that is the axis point from the current AxisPointTuple object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DashboardCommon.ViewerData.AxisPointTuple.GetHashCode">
+            <summary>
+                <para>Gets the hash code that corresponds to the value of the current AxisPointTuple object.
+</para>
+            </summary>
+            <returns>An integer value representing the hash code for the current object.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DashboardCommon.ViewerData.AxisPointTuple.IsEmpty">
+            <summary>
+                <para>Gets whether or not the current AxisPointTuple object contains axis points.
+</para>
+            </summary>
+            <value><b>true</b>, if the current AxisPointTuple object does not contain axis points; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.DashboardCommon.ViewerData.AxisPoint">
 
             <summary>
@@ -28484,6 +28296,39 @@ Note that this sort order is in effect in OLAP mode only.
 
 
         </member>
+        <member name="T:DevExpress.DashboardCommon.GridColumnFixedWidthType">
+
+            <summary>
+                <para>Lists values that specify the mode used to manage the width of individual columns.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.GridColumnFixedWidthType.FitToContent">
+            <summary>
+                <para>The column has the fixed width required to completely display its content.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.GridColumnFixedWidthType.FixedWidth">
+            <summary>
+                <para>The column has a fixed width. Use the <see cref="P:DevExpress.DashboardCommon.GridColumnBase.FixedWidth"/> property to specify the fixed column width.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.GridColumnFixedWidthType.Weight">
+            <summary>
+                <para>The column has the fixed relative width. Use the <see cref="P:DevExpress.DashboardCommon.GridColumnBase.Weight"/> property to specify the column relative width.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.DashboardCommon.GridColumnTotalCollection">
 
             <summary>
@@ -28562,8 +28407,8 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.GridColumnTotalType.Auto">
             <summary>
-                <para>The total is calculated based on values of the corresponding data field from the underlying data source. In this case, the <see cref="P:DevExpress.DashboardCommon.Measure.SummaryType"/> property value is taken into account to calculate the total. Note that the <see cref="F:DevExpress.DashboardCommon.GridColumnTotalType.Auto"/> type is not supported when the Grid is bound to an OLAP data source.
-
+                <para>The total is calculated based on values of the corresponding data field from the underlying data source. In this case, the <see cref="P:DevExpress.DashboardCommon.Measure.SummaryType"/> property value is taken into account to calculate the total. 
+Note that the <see cref="F:DevExpress.DashboardCommon.GridColumnTotalType.Auto"/> type is not supported when the Grid is bound to an OLAP data source.
 </para>
             </summary>
 
