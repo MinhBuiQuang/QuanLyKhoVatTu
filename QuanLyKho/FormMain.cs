@@ -10,20 +10,24 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.LookAndFeel;
 using QuanLyKho.DesignClasses;
+using DataAccess.Objects;
 
 namespace QuanLyKho
 {
     public partial class FormMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        public static User nguoiDung = new User();
         public FormMain()
         {
             InitializeComponent();
             Constant.ChangeDevexpressTheme();
+            nguoiDung.IDUser = 1;
         }
         public FormMain(int IDUser)
         {
             InitializeComponent();
             Constant.ChangeDevexpressTheme();
+            nguoiDung.IDUser = IDUser;
         }
 
         private void LoadMainPanel(Control control)
@@ -40,7 +44,7 @@ namespace QuanLyKho
 
         private void btnDMLoaiTaiKhoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FormQLDanhMucTaiKhoan form = new FormQLDanhMucTaiKhoan();
+            FormQLDMTaiKhoan form = new FormQLDMTaiKhoan();
             LoadMainPanel(form);
         }
 
@@ -60,6 +64,18 @@ namespace QuanLyKho
         {
             UCMainAdministrator uc = new UCMainAdministrator();
             LoadMainPanel(uc);
+        }
+
+        private void btnDMDonVi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormDMDonViTinh form = new FormDMDonViTinh();
+            LoadMainPanel(form);
+        }
+
+        private void btnDMLoaiHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormDMLoaiHang form = new FormDMLoaiHang();
+            LoadMainPanel(form);
         }
     }
 }

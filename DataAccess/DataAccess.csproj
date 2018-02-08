@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\DonViTinhDAL.cs" />
     <Compile Include="DAL\HangHoaDAL.cs" />
+    <Compile Include="DAL\LoaiHangDAL.cs" />
+    <Compile Include="DAL\QuyenDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="Objects\ChiTietHoaDon.cs" />

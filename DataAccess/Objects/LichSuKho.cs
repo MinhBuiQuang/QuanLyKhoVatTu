@@ -16,7 +16,7 @@ namespace DataAccess.Objects
         }
         public int IDLichSuKho { get; set; }
         public DateTime ThoiGian { get; set; }
-        public int SoLuong { get; set; }
+        public float SoLuong { get; set; }
         public User NguoiThucHien { get; set; }
         public HangHoa HangHoaXuLy { get; set; }
         public bool IsXuat { get; set; }

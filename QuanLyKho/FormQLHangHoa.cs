@@ -15,39 +15,55 @@ namespace QuanLyKho
 {
     public partial class FormQLHangHoa : DevExpress.XtraEditors.XtraUserControl
     {
+        HangHoaDAL da;
+        DataTable dt;
         public FormQLHangHoa()
         {
             InitializeComponent();
 
-            gCHangHoa.DataSource = GetDataSource();
+            treeHangHoa.DataSource = GetDataSource();
         }
         void windowsUIButtonPanel_ButtonClick(object sender, DevExpress.XtraBars.Docking2010.ButtonEventArgs e)
         {
-            if (e.Button.Properties.Caption == "Print") gCHangHoa.ShowRibbonPrintPreview();
+            if (e.Button.Properties.Caption == "Print") treeHangHoa.ShowRibbonPrintPreview();
         }
         public DataTable GetDataSource()
         {
             //BindingList<HangHoa> result = new BindingList<HangHoa>();
-            HangHoaDAL da = new HangHoaDAL();
+            da = new HangHoaDAL();
             try
             {
-
+                dt = new DataTable();
+                dt = da.GetHangHoa();
             }
             catch
             {
 
             }
-            return da.GetHangHoa();
+            return dt;
         }
-        public class HangHoa
+
+        private void LoadTreeList()
         {
-            [Key, Display(AutoGenerateField = false)]
-            public int ID { get; set; }
-            [Required]
-            public string TenMatHang { get; set; }
-            public string Loai { get; set; }
-            public string TonKho { get; set; }
-            public string DonGia { get; set; }
+            treeHangHoa.DataSource = GetDataSource();
+        }
+
+        private void btnNhapKho_Click(object sender, EventArgs e)
+        {
+            int IDHangHoa = (int)treeHangHoa.GetRowCellValue(treeHangHoa.FocusedNode, colIDHangHoa);
+            FormSubNhapKho form = new FormSubNhapKho(IDHangHoa);
+            form.ShowDialog();
+            LoadTreeList();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

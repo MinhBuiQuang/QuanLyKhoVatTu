@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess.Objects;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -17,39 +18,78 @@ namespace DataAccess.DAL
             try
             {
                 dt = db.ExecuteDataSet("sp_HangHoa_Select", new SqlParameter[0]).Tables[0];
-                //if (dt.Rows.Count != 0)
-                //{
-                //    foreach (DataRow dr in dt.Rows)
-                //    {
-                //        Quyen quyen = new Quyen
-                //        {
-                //            IDQuyen = int.Parse(dr["IDUser"].ToString()),
-                //            TenQuyen = dr["IDUser"].ToString()
-                //        };
-                //        User obj = new User
-                //        {
-                //            IDUser = int.Parse(dr["IDUser"].ToString()),
-                //            Username = dr["Username"].ToString(),
-                //            Ho = dr["Ho"].ToString(),
-                //            Ten = dr["IDUser"].ToString(),
-                //            SoDienThoai = dr["IDUser"].ToString(),
-                //            CMND = dr["IDUser"].ToString(),
-                //            QueQuan = dr["IDUser"].ToString(),
-                //            DiaChi = dr["IDUser"].ToString(),
-                //            LoaiTaiKhoan = quyen,
-                //            IsMale = bool.Parse(dr["IDUser"].ToString()),
-                //            NgaySinh = DateTime.Parse(dr["IDUser"].ToString()),
-                //            NgayVaoLam = DateTime.Parse(dr["IDUser"].ToString())
-                //        };
-                //        temp.Add(obj);
-                //    }
-                //}
             }
             catch (Exception ex)
             {
                 throw ex;
             }
             return dt;
+        }
+
+        public void Insert(HangHoa hangHoa)
+        {
+            try
+            {
+                DBConnect db = new DBConnect();
+                SqlParameter[] param = new SqlParameter[]
+                {
+                    new SqlParameter("@TenHangHoa", hangHoa.TenHangHoa),
+                    new SqlParameter("@DonGia", hangHoa.DonGia),
+                    new SqlParameter("@GhiChu", hangHoa.GhiChu),
+                    new SqlParameter("@IDNhaCungCap", hangHoa.NguonCungCap.IDNhaCungCap),
+                    new SqlParameter("@IDDonVi", hangHoa.DonVi.IDDonVi),
+                    new SqlParameter("@IDViTri",  hangHoa.ViTriHangHoa.IDViTri),
+                    new SqlParameter("@IDLoaiHang", hangHoa.LoaiHangHoa.IDLoaiHang)
+                };
+                db.ExecuteNonQuery("sp_HangHoa_Insert", param);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public void NhapKho(LichSuKho lsk)
+        {
+            try
+            {
+                DBConnect db = new DBConnect();
+                SqlParameter[] param = new SqlParameter[]
+                {
+                    new SqlParameter("@ThoiGian", lsk.ThoiGian),
+                    new SqlParameter("@SoLuong", lsk.SoLuong),
+                    new SqlParameter("@IDUser", lsk.NguoiThucHien.IDUser),
+                    new SqlParameter("@IDHangHoa", lsk.HangHoaXuLy.IDHangHoa),
+                    new SqlParameter("@HaveSub", false)
+                };
+                db.ExecuteNonQuery("sp_LichSuKho_NhapKho", param);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public void NhapKho(LichSuKho lsk,  float donGiaSub, float soLuongSub, int idDonViSub)
+        {
+            try
+            {
+                DBConnect db = new DBConnect();
+                SqlParameter[] param = new SqlParameter[]
+                {
+                    new SqlParameter("@ThoiGian", lsk.ThoiGian),
+                    new SqlParameter("@SoLuong", lsk.SoLuong),
+                    new SqlParameter("@IDUser", lsk.NguoiThucHien.IDUser),
+                    new SqlParameter("@IDHangHoa", lsk.HangHoaXuLy.IDHangHoa),
+                    new SqlParameter("@HaveSub", true),
+                    new SqlParameter("@DonGiaSub", donGiaSub),
+                    new SqlParameter("@SoLuongSub", soLuongSub),
+                    new SqlParameter("@IDDonViSub", idDonViSub)
+                };
+                db.ExecuteNonQuery("sp_LichSuKho_NhapKho", param);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

@@ -43,11 +43,13 @@
             this.btnTaiKhoan = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.btnDMLoaiTaiKhoan = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDMDonVi = new DevExpress.XtraBars.BarButtonItem();
             this.btnBaoCao = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.mainPanel = new DevExpress.XtraEditors.PanelControl();
+            this.btnDMLoaiHang = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainPanel)).BeginInit();
@@ -80,9 +82,11 @@
             this.btnTaiKhoan,
             this.barSubItem1,
             this.btnDMLoaiTaiKhoan,
-            this.btnBaoCao});
+            this.btnBaoCao,
+            this.btnDMDonVi,
+            this.btnDMLoaiHang});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 15;
+            this.ribbonControl.MaxItemId = 17;
             this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -174,7 +178,9 @@
             this.barSubItem1.ImageOptions.LargeImage = global::QuanLyKho.Properties.Resources.Business_Todo_List_icon;
             this.barSubItem1.LargeWidth = 80;
             this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnDMLoaiTaiKhoan)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnDMLoaiTaiKhoan),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnDMDonVi),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnDMLoaiHang)});
             this.barSubItem1.Name = "barSubItem1";
             // 
             // btnDMLoaiTaiKhoan
@@ -183,6 +189,13 @@
             this.btnDMLoaiTaiKhoan.Id = 12;
             this.btnDMLoaiTaiKhoan.Name = "btnDMLoaiTaiKhoan";
             this.btnDMLoaiTaiKhoan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDMLoaiTaiKhoan_ItemClick);
+            // 
+            // btnDMDonVi
+            // 
+            this.btnDMDonVi.Caption = "Đơn vị tính";
+            this.btnDMDonVi.Id = 15;
+            this.btnDMDonVi.Name = "btnDMDonVi";
+            this.btnDMDonVi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDMDonVi_ItemClick);
             // 
             // btnBaoCao
             // 
@@ -229,6 +242,13 @@
             this.mainPanel.Size = new System.Drawing.Size(1010, 347);
             this.mainPanel.TabIndex = 2;
             // 
+            // btnDMLoaiHang
+            // 
+            this.btnDMLoaiHang.Caption = "Loại Hàng";
+            this.btnDMLoaiHang.Id = 16;
+            this.btnDMLoaiHang.Name = "btnDMLoaiHang";
+            this.btnDMLoaiHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDMLoaiHang_ItemClick);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,5 +291,7 @@
         private DevExpress.XtraBars.BarSubItem barSubItem1;
         private DevExpress.XtraBars.BarButtonItem btnDMLoaiTaiKhoan;
         private DevExpress.XtraBars.BarButtonItem btnBaoCao;
+        private DevExpress.XtraBars.BarButtonItem btnDMDonVi;
+        private DevExpress.XtraBars.BarButtonItem btnDMLoaiHang;
     }
 }

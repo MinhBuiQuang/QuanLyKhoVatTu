@@ -9,6 +9,6 @@ namespace DataAccess.Objects
     public class DonViTinh
     {
         public int IDDonVi { get; set; }
-        public string DonVi { get; set; }
+        public string TenDonVi { get; set; }
     }
 }
