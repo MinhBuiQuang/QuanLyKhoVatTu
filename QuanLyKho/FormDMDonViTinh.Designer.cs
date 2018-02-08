@@ -133,7 +133,7 @@
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Đơn vị tính";
-            this.gridColumn6.FieldName = "DonVi";
+            this.gridColumn6.FieldName = "TenDonVi";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
