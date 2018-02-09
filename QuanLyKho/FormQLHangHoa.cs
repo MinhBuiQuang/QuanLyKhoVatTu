@@ -26,6 +26,17 @@ namespace QuanLyKho
         void windowsUIButtonPanel_ButtonClick(object sender, DevExpress.XtraBars.Docking2010.ButtonEventArgs e)
         {
             if (e.Button.Properties.Caption == "Print") treeHangHoa.ShowRibbonPrintPreview();
+            if (e.Button.Properties.Caption == "Thêm hàng hóa")
+            {
+                this.Controls.Clear();
+                FormQLChiTietHangHoa_V2 frm = new FormQLChiTietHangHoa_V2();
+                frm.Dock = DockStyle.Fill;
+                this.Controls.Add(frm);
+            }
+            if (e.Button.Properties.Caption == "Nhập kho")
+            {
+
+            }
         }
         public DataTable GetDataSource()
         {
@@ -58,7 +69,11 @@ namespace QuanLyKho
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-
+            int IDHangHoa = (int)treeHangHoa.GetRowCellValue(treeHangHoa.FocusedNode, colIDHangHoa);
+            FormQLChiTietHangHoa_V2 form = new FormQLChiTietHangHoa_V2(IDHangHoa);
+            this.Controls.Clear();
+            form.Dock = DockStyle.Fill;
+            this.Controls.Add(form);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

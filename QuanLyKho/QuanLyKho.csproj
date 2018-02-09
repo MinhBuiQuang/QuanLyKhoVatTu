@@ -91,6 +91,12 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormQLChiTietHangHoa_V2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormQLChiTietHangHoa_V2.Designer.cs">
+      <DependentUpon>FormQLChiTietHangHoa_V2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQLDMTaiKhoan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLChiTietHangHoa_V2.resx">
+      <DependentUpon>FormQLChiTietHangHoa_V2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQLDMTaiKhoan.resx">
       <DependentUpon>FormQLDMTaiKhoan.cs</DependentUpon>

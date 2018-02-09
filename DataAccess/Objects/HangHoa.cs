@@ -19,11 +19,12 @@ namespace DataAccess.Objects
         public string MaHangHoa { get; set; }
         public NhaCungCap NguonCungCap { get; set; }
         public string TenHangHoa { get; set; }
-        public int SoLuongTonKho { get; set; }
+        public float SoLuongTonKho { get; set; }
         public float DonGia { get; set; }
         public DonViTinh DonVi { get; set; }
         public ViTri ViTriHangHoa { get; set; }
         public LoaiHang LoaiHangHoa { get; set; }
         public string GhiChu { get; set; }
+        public string Image { get; set; }
     }
 }

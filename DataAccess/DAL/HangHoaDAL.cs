@@ -26,6 +26,21 @@ namespace DataAccess.DAL
             return dt;
         }
 
+        public DataTable GetHangHoa(int IDHangHoa)
+        {
+            DataTable dt = new DataTable();
+            DBConnect db = new DBConnect();
+            try
+            {
+                dt = db.ExecuteDataSet("sp_HangHoa_Select", new SqlParameter("@IDHangHoa", IDHangHoa)).Tables[0];
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return dt;
+        }
+
         public void Insert(HangHoa hangHoa)
         {
             try
@@ -36,10 +51,11 @@ namespace DataAccess.DAL
                     new SqlParameter("@TenHangHoa", hangHoa.TenHangHoa),
                     new SqlParameter("@DonGia", hangHoa.DonGia),
                     new SqlParameter("@GhiChu", hangHoa.GhiChu),
-                    new SqlParameter("@IDNhaCungCap", hangHoa.NguonCungCap.IDNhaCungCap),
+                    new SqlParameter("@IDNhaCungCap", hangHoa.NguonCungCap.IDNhaCungCap == 0 ? (object)DBNull.Value : hangHoa.NguonCungCap.IDNhaCungCap),
                     new SqlParameter("@IDDonVi", hangHoa.DonVi.IDDonVi),
-                    new SqlParameter("@IDViTri",  hangHoa.ViTriHangHoa.IDViTri),
-                    new SqlParameter("@IDLoaiHang", hangHoa.LoaiHangHoa.IDLoaiHang)
+                    new SqlParameter("@IDViTri",  hangHoa.ViTriHangHoa.IDViTri == 0 ? (object)DBNull.Value : hangHoa.ViTriHangHoa.IDViTri),
+                    new SqlParameter("@IDLoaiHang", hangHoa.LoaiHangHoa.IDLoaiHang),
+                    new SqlParameter("@Image", hangHoa.Image)
                 };
                 db.ExecuteNonQuery("sp_HangHoa_Insert", param);
             }
@@ -48,6 +64,32 @@ namespace DataAccess.DAL
                 throw ex;
             }
         }
+
+        public void Update(HangHoa hangHoa)
+        {
+            try
+            {
+                DBConnect db = new DBConnect();
+                SqlParameter[] param = new SqlParameter[]
+                {
+                    new SqlParameter("@IDHangHoa", hangHoa.IDHangHoa),
+                    new SqlParameter("@TenHangHoa", hangHoa.TenHangHoa),
+                    new SqlParameter("@DonGia", hangHoa.DonGia),
+                    new SqlParameter("@GhiChu", hangHoa.GhiChu),
+                    new SqlParameter("@IDNhaCungCap", hangHoa.NguonCungCap.IDNhaCungCap == 0 ? (object)DBNull.Value : hangHoa.NguonCungCap.IDNhaCungCap),
+                    new SqlParameter("@IDDonVi", hangHoa.DonVi.IDDonVi),
+                    new SqlParameter("@IDViTri",  hangHoa.ViTriHangHoa.IDViTri == 0 ? (object)DBNull.Value : hangHoa.ViTriHangHoa.IDViTri),
+                    new SqlParameter("@IDLoaiHang", hangHoa.LoaiHangHoa.IDLoaiHang),
+                    new SqlParameter("@Image", hangHoa.Image)
+                };
+                db.ExecuteNonQuery("sp_HangHoa_Update", param);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public void NhapKho(LichSuKho lsk)
         {
             try
