@@ -145,6 +145,8 @@
             this.gridColumn3.Caption = "Sửa";
             this.gridColumn3.ColumnEdit = this.btnEdit;
             this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 1;
             this.gridColumn3.Width = 56;
             // 
             // btnEdit
@@ -163,7 +165,7 @@
             this.gridColumn2.ColumnEdit = this.btnDelete;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.VisibleIndex = 2;
             this.gridColumn2.Width = 66;
             // 
             // btnDelete

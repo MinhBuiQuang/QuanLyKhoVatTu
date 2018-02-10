@@ -12,6 +12,7 @@ using System.ComponentModel.DataAnnotations;
 using System.IO;
 using DevExpress.XtraLayout.Helpers;
 using DevExpress.XtraLayout;
+using DataAccess.Objects;
 
 namespace QuanLyKho
 {
@@ -25,28 +26,8 @@ namespace QuanLyKho
         }
         static List<Quyen> GetDataSource()
         {
-            List<Quyen> result = new List<Quyen>();
-            result.Add(new Quyen()
-            {
-                ID = 1,
-                LoaiTaiKhoan = "Người quản lý"
-            });
-            result.Add(new Quyen()
-            {
-                ID = 2,
-                LoaiTaiKhoan = "Nhân viên"
-            });
+            List<Quyen> result = new List<Quyen>();          
             return result;
-        }
-
-        public class Quyen
-        {
-            [Key, Display(AutoGenerateField = false)]
-            public int ID { get; set; }
-            [Required]
-            [Display(Name = "Loại tài khoản")]
-            public string LoaiTaiKhoan { get; set; }
-        }
-        
+        }       
     }
 }
