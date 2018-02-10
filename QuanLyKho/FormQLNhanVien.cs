@@ -24,20 +24,33 @@ namespace QuanLyKho
     {
         UserDAL userDAL = new UserDAL();
         List<Quyen> listQuyen = new List<Quyen>();
-        UserDump user = new UserDump();
+        UserDump user;
         public FormQLNhanVien()
         {
             InitializeComponent();
+            listQuyen = JsonConvert.DeserializeObject<List<Quyen>>(JsonConvert.SerializeObject(getAllQuyen()));
+            leQuyen.Properties.DataSource = listQuyen.Select(quyen => quyen.TenQuyen).ToList();
+            var gt= new List<String>();
+            gt.Add("Nữ");
+            gt.Add("Nam");
+         
+            leGioiTinh.Properties.DataSource = gt;
         }
         public FormQLNhanVien(String idUSer)
         {
             InitializeComponent();
+            var gt = new List<String>();
+            gt.Add("Nữ");
+            gt.Add("Nam");
+            
+            leGioiTinh.Properties.DataSource = gt;
             String JSONresult = JsonConvert.SerializeObject(getUserData(idUSer));
              user = JsonConvert.DeserializeObject<List<UserDump>>(JSONresult)[0];
              listQuyen = JsonConvert.DeserializeObject<List<Quyen>>(JsonConvert.SerializeObject(getAllQuyen()));
             txtTen.Text = user.Ten;
             txtTaiKhoan.Text = user.Username;
             txtSoDienThoai.Text = user.SoDienThoai;
+           
             txtHo.Text = user.Ho;
             teNgaySinh.EditValue = user.NgaySinh;
             teNgayVaoLam.EditValue = user.NgayVaoLam;
@@ -45,6 +58,16 @@ namespace QuanLyKho
             txtCMND.Text = user.CMND;
             leQuyen.Properties.DataSource = listQuyen.Select(quyen => quyen.TenQuyen).ToList();
             leQuyen.EditValue = user.TenQuyen;
+            if (user.IsMale)
+            {
+                leGioiTinh.EditValue = "Nam";
+                leGioiTinh.ItemIndex = 1;
+            }
+            else
+            {
+                leGioiTinh.EditValue = "Nữ";
+                leGioiTinh.ItemIndex = 0;
+            }
             pictureBox.Image = !String.IsNullOrEmpty(user.Avatar) ? HamChung.Base64ToImage(user.Avatar) : HamChung.Base64ToImage(Constant.getBase64NoImagePicture());
         }
 
@@ -64,9 +87,18 @@ namespace QuanLyKho
         private void windowsUIButtonPanelMain_ButtonClick(object sender, DevExpress.XtraBars.Docking2010.ButtonEventArgs e)
         {
             if (e.Button.Properties.Caption.Equals("Lưu")){
-                UserDump ur= new UserDump(user.IDUser, txtTaiKhoan.Text, txtHo.Text, txtTen.Text, txtSoDienThoai.Text, txtCMND.Text, "", txtDiaChi.Text, listQuyen[leQuyen.ItemIndex].IDQuyen, (DateTime)teNgaySinh.EditValue, (DateTime)teNgayVaoLam.EditValue, "");
-                userDAL.UpdateUser(ur);
-                MessageBox.Show("Thành công");
+                if (user != null)
+                {
+                    UserDump ur = new UserDump(user.IDUser, txtTaiKhoan.Text, txtHo.Text, txtTen.Text, txtSoDienThoai.Text, txtCMND.Text, "", txtDiaChi.Text, listQuyen[leQuyen.ItemIndex].IDQuyen, (DateTime)teNgaySinh.EditValue, (DateTime)teNgayVaoLam.EditValue, "",leGioiTinh.ItemIndex);
+                    userDAL.UpdateUser(ur);
+                    MessageBox.Show("Cập nhật thành công");
+                }else
+                {
+                    UserDump ur = new UserDump(txtTaiKhoan.Text, txtHo.Text, txtTen.Text, txtSoDienThoai.Text, txtCMND.Text, "", txtDiaChi.Text, listQuyen[leQuyen.ItemIndex].IDQuyen, (DateTime)teNgaySinh.EditValue, (DateTime)teNgayVaoLam.EditValue, "", leGioiTinh.ItemIndex);
+                    ur.Password = HamChung.CreateMD5(txtMatKhau.Text);
+                    userDAL.createUser(ur);
+                    MessageBox.Show("Cập nhật thành công");
+                }
             }
         }
 

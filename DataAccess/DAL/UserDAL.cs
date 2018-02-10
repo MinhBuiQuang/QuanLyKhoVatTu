@@ -62,6 +62,7 @@ namespace DataAccess.DAL
                     new SqlParameter("@DiaChi", user.DiaChi),
                     new SqlParameter("@IDQuyen",user.IDQuyen),
                     new SqlParameter("@Avatar",user.Avatar),
+                    new SqlParameter("@IsMale",user.IsMale),
                 };
                 db.ExecuteNonQuery("sp_User_Update", param);
             }
@@ -69,6 +70,37 @@ namespace DataAccess.DAL
             {
                 throw ex;
             }
+        }
+        public void createUser(UserDump user)
+        {
+            DataTable dt = new DataTable();
+            DBConnect db = new DBConnect();
+            try
+            {
+                SqlParameter[] param = new SqlParameter[]
+                {
+                    new SqlParameter("@Username", user.Username),
+                    new SqlParameter("@Password", user.Password),
+                    new SqlParameter("@Ho", user.Ho),
+                    new SqlParameter("@Ten", user.Ten),
+                    new SqlParameter("@SoDienThoai", user.SoDienThoai),
+                    new SqlParameter("@CMND", user.CMND),
+                    new SqlParameter("@NgaySinh", user.NgaySinh),
+                    new SqlParameter("@NgayVaoLam", user.NgayVaoLam),
+                    new SqlParameter("@QueQuan",user.QueQuan),
+                    new SqlParameter("@DiaChi", user.DiaChi),
+                    new SqlParameter("@IDQuyen",user.IDQuyen),
+                    new SqlParameter("@Avatar",user.Avatar),
+                    new SqlParameter("@IsMale",user.IsMale)
+
+                };
+                db.ExecuteNonQuery("sp_User_Insert", param);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
     }
 }
