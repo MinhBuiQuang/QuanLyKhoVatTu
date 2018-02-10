@@ -13,6 +13,7 @@ namespace QuanLyKho.DesignClasses
 {
     public class HamChung
     {
+        public static HamChung builder = new HamChung();
         public static Image Base64ToImage(string base64Image)
         {
             using (MemoryStream ms = new MemoryStream(Convert.FromBase64String(base64Image)))
@@ -30,6 +31,10 @@ namespace QuanLyKho.DesignClasses
                 Image image = Image.FromStream(ms, true);
                 return image;
             }
+        }
+        private HamChung()
+        {
+
         }
 
         public List<T> DataTableToList<T>(DataTable datatable) where T : new()

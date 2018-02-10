@@ -106,7 +106,7 @@ namespace QuanLyKho
             da = new HangHoaDAL();
             DataTable dt = new DataTable();
             dt = da.GetHangHoa(IDHangHoa);
-            HamChung hc = new HamChung();           
+            HamChung hc = HamChung.builder;           
             if (dt.Rows.Count == 0)
             {
                 MessageBox.Show("Không tìm thấy mặt hàng này!");

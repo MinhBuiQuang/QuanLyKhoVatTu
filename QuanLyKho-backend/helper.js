@@ -17,6 +17,19 @@ let login = (username, password, callback) => {
         }
     );
 };
+let hanghoa=()=>{
+    const pool = require('./db')();
+    pool.request()
+        .execute('sp_HangHoa_Select')
+        .then(result => {
+
+            console.log(result.recordset)
+        }).catch(err => {
+            console.log("sp_User_login", err);
+            callback(err, null)
+        }
+    );
+}
 module.exports = {
-    login
+    login,hanghoa
 };

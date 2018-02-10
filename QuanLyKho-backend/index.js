@@ -42,12 +42,13 @@ let setupServer = () => {
         let user = verifyToken(token)
         res.status(user ? 200 : 403).send(user)
     });
+    helper.hanghoa()
     let verifyToken = (token) => {
         try {
             let decode = jwt.verify(token, SHAKEY);
             return decode.user
         } catch (ex) {
-            return null
+            return null;
         }
     }
     let getToken = (user) => {

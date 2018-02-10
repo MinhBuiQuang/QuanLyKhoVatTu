@@ -11,6 +11,9 @@ using DevExpress.XtraEditors;
 using System.ComponentModel.DataAnnotations;
 using DataAccess.DAL;
 using DevExpress.XtraGrid.Views.Base;
+using DataAccess.Objects;
+using Newtonsoft.Json;
+using DataAccess.ObjectsDump;
 
 namespace QuanLyKho
 {
@@ -32,9 +35,9 @@ namespace QuanLyKho
                 this.Controls.Add(frm);                
             }
         }
+        
         public DataTable GetDataSource()
         {
-            BindingList<Customer> result = new BindingList<Customer>();
             UserDAL da = new UserDAL(); 
             try
             {
@@ -46,23 +49,13 @@ namespace QuanLyKho
             }       
             return da.GetUser();
         }
-        public class Customer
-        {
-            [Key, Display(AutoGenerateField = false)]
-            public int ID { get; set; }
-            [Required]
-            [Display(Name ="Tên nhân viên")]
-            public string TenNhanVien { get; set; }
-            [Display(Name = "Địa chỉ")]
-            public string DiaChi { get; set; }
-            [Display(Name = "Số điện thoại")]
-            public string Phone { get; set; }
-        }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            DataRowView cell = (DataRowView)gVDSNhanVien.GetRow(gVDSNhanVien.FocusedRowHandle);
+            
             this.Controls.Clear();
-            FormQLNhanVien frm = new FormQLNhanVien(true);
+            FormQLNhanVien frm = new FormQLNhanVien(cell["IDUser"].ToString());
             frm.Dock = DockStyle.Fill;
             this.Controls.Add(frm);
         }

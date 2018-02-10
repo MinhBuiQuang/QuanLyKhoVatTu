@@ -23,7 +23,7 @@ namespace QuanLyKho
         private List<DonViTinh> listRemove = new List<DonViTinh>();
         private List<DonViTinh> listEdit = new List<DonViTinh>();
         private bool isUpdate = false;
-        HamChung hc = new HamChung();
+        HamChung hc =HamChung.builder;
         public FormDMDonViTinh()
         {
             InitializeComponent();

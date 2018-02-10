@@ -13,34 +13,61 @@ using System.IO;
 using DevExpress.XtraLayout.Helpers;
 using DevExpress.XtraLayout;
 using QuanLyKho.DesignClasses;
+using DataAccess.ObjectsDump;
+using DataAccess.DAL;
+using DataAccess.Objects;
+using Newtonsoft.Json;
 
 namespace QuanLyKho
 {
     public partial class FormQLNhanVien : DevExpress.XtraEditors.XtraUserControl
     {
+        UserDAL userDAL = new UserDAL();
+        List<Quyen> listQuyen = new List<Quyen>();
+        UserDump user = new UserDump();
         public FormQLNhanVien()
         {
             InitializeComponent();
         }
-        public FormQLNhanVien(bool sua)
+        public FormQLNhanVien(String idUSer)
         {
             InitializeComponent();
-            txtTen.Text = "Hảo";
-            txtTaiKhoan.Text = "haoht";
-            txtSoDienThoai.Text = "0968 256 987";
-            txtHo.Text = "Hoàng Trần";
-            txtDiaChi.Text = "28 Hoàng cầu";
-            txtCMND.Text = "155234158";
-            pictureBox.Image = HamChung.Base64ToImage(userPicture);
+            String JSONresult = JsonConvert.SerializeObject(getUserData(idUSer));
+             user = JsonConvert.DeserializeObject<List<UserDump>>(JSONresult)[0];
+             listQuyen = JsonConvert.DeserializeObject<List<Quyen>>(JsonConvert.SerializeObject(getAllQuyen()));
+            txtTen.Text = user.Ten;
+            txtTaiKhoan.Text = user.Username;
+            txtSoDienThoai.Text = user.SoDienThoai;
+            txtHo.Text = user.Ho;
+            teNgaySinh.EditValue = user.NgaySinh;
+            teNgayVaoLam.EditValue = user.NgayVaoLam;
+            txtDiaChi.Text = user.DiaChi;
+            txtCMND.Text = user.CMND;
+            leQuyen.Properties.DataSource = listQuyen.Select(quyen => quyen.TenQuyen).ToList();
+            leQuyen.EditValue = user.TenQuyen;
+            pictureBox.Image = !String.IsNullOrEmpty(user.Avatar) ? HamChung.Base64ToImage(user.Avatar) : HamChung.Base64ToImage(Constant.getBase64NoImagePicture());
         }
 
         private void windowsUIButtonPanelMain_Click(object sender, EventArgs e)
         {
 
         }
+        private DataTable getUserData(String id)
+        {
+            return userDAL.GetUser(id);
+        }
+        private DataTable getAllQuyen()
+        {
+            return (new QuyenDAL()).GetQuyen();
+        }
 
         private void windowsUIButtonPanelMain_ButtonClick(object sender, DevExpress.XtraBars.Docking2010.ButtonEventArgs e)
         {
+            if (e.Button.Properties.Caption.Equals("Lưu")){
+                UserDump ur= new UserDump(user.IDUser, txtTaiKhoan.Text, txtHo.Text, txtTen.Text, txtSoDienThoai.Text, txtCMND.Text, "", txtDiaChi.Text, listQuyen[leQuyen.ItemIndex].IDQuyen, (DateTime)teNgaySinh.EditValue, (DateTime)teNgayVaoLam.EditValue, "");
+                userDAL.UpdateUser(ur);
+                MessageBox.Show("Thành công");
+            }
         }
 
         private void windowsUIButtonPanelCloseButton_ButtonClick(object sender, DevExpress.XtraBars.Docking2010.ButtonEventArgs e)

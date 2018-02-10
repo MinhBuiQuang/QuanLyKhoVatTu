@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +50,7 @@
     <Compile Include="DAL\QuyenDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="DBConnect.cs" />
+    <Compile Include="ObjectsDump\UserDump.cs" />
     <Compile Include="Objects\ChiTietHoaDon.cs" />
     <Compile Include="Objects\DonViTinh.cs" />
     <Compile Include="Objects\HangHoa.cs" />
@@ -59,7 +64,9 @@
     <Compile Include="Objects\User.cs" />
     <Compile Include="Objects\ViTri.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -22,7 +22,7 @@ namespace QuanLyKho
         private List<LoaiHang> listAdd = new List<LoaiHang>();
         private List<LoaiHang> listRemove = new List<LoaiHang>();
         private List<LoaiHang> listEdit = new List<LoaiHang>();
-        HamChung hc = new HamChung();
+        HamChung hc = HamChung.builder;
         private bool isUpdate = false;
         public FormDMLoaiHang()
         {

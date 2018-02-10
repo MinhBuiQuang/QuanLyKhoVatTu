@@ -35,18 +35,23 @@
   <ItemGroup>
     <Reference Include="Accessibility" />
     <Reference Include="DevExpress.BonusSkins.v17.1" />
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Dashboard.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v17.1" />
     <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Images.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v17.1" />
     <Reference Include="DevExpress.Sparkline.v17.1.Core" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v17.1" />
     <Reference Include="DevExpress.Printing.v17.1.Core" />
     <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -68,23 +73,35 @@
   <ItemGroup>
     <Compile Include="DesignClasses\Constant.cs" />
     <Compile Include="DesignClasses\HamChung.cs" />
+    <Compile Include="FormDMDonViTinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormDMDonViTinh.Designer.cs">
+      <DependentUpon>FormDMDonViTinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDMLoaiHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormDMLoaiHang.Designer.cs">
+      <DependentUpon>FormDMLoaiHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormNhapKho.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormNhapKho.Designer.cs">
-      <DependentUpon>FormNhapKho.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormQLDanhMucTaiKhoan.cs">
+    <Compile Include="FormQLChiTietHangHoa_V2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FormQLDanhMucTaiKhoan.Designer.cs">
-      <DependentUpon>FormQLDanhMucTaiKhoan.cs</DependentUpon>
+    <Compile Include="FormQLChiTietHangHoa_V2.Designer.cs">
+      <DependentUpon>FormQLChiTietHangHoa_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQLDMTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormQLDMTaiKhoan.Designer.cs">
+      <DependentUpon>FormQLDMTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQLDSNhanVien.cs">
       <SubType>UserControl</SubType>
@@ -109,6 +126,12 @@
     </Compile>
     <Compile Include="FormQLTonKho.Designer.cs">
       <DependentUpon>FormQLTonKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSubNhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSubNhapKho.Designer.cs">
+      <DependentUpon>FormSubNhapKho.cs</DependentUpon>
     </Compile>
     <Compile Include="FormXuatBanHang.cs">
       <SubType>UserControl</SubType>
@@ -136,14 +159,20 @@
     <Compile Include="XtraUserControl1.Designer.cs">
       <DependentUpon>XtraUserControl1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormDMDonViTinh.resx">
+      <DependentUpon>FormDMDonViTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDMLoaiHang.resx">
+      <DependentUpon>FormDMLoaiHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormNhapKho.resx">
-      <DependentUpon>FormNhapKho.cs</DependentUpon>
+    <EmbeddedResource Include="FormQLChiTietHangHoa_V2.resx">
+      <DependentUpon>FormQLChiTietHangHoa_V2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormQLDanhMucTaiKhoan.resx">
-      <DependentUpon>FormQLDanhMucTaiKhoan.cs</DependentUpon>
+    <EmbeddedResource Include="FormQLDMTaiKhoan.resx">
+      <DependentUpon>FormQLDMTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQLDSNhanVien.resx">
       <DependentUpon>FormQLDSNhanVien.cs</DependentUpon>
@@ -156,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormQLTonKho.resx">
       <DependentUpon>FormQLTonKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSubNhapKho.resx">
+      <DependentUpon>FormSubNhapKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormXuatBanHang.resx">
       <DependentUpon>FormXuatBanHang.cs</DependentUpon>
@@ -252,6 +284,15 @@
       <Project>{50224ca5-8c5a-4006-a8b6-491346895191}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layer-import-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

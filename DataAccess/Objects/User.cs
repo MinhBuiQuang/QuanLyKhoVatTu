@@ -12,9 +12,10 @@ namespace DataAccess.Objects
         {
             LoaiTaiKhoan = new Quyen();
         }
-        public int IDUser { get; set; }
+        public int? IDUser { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+        public string Avatar { get; set; }
         public string Ho { get; set; }
         public string Ten { get; set; }
         public string SoDienThoai { get; set; }
@@ -23,7 +24,7 @@ namespace DataAccess.Objects
         public string DiaChi { get; set; }
         public DateTime NgaySinh { get; set; }
         public DateTime NgayVaoLam { get; set; }
-        public bool IsMale { get; set; }
+        public bool? IsMale { get; set; }
         public Quyen LoaiTaiKhoan { get; set; }
     }
 }
