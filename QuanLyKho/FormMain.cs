@@ -33,6 +33,7 @@ namespace QuanLyKho
             usr.Username = user.Username;
             usr.Ho = user.Ho;
             usr.Ten = user.Ten;
+            usr.LoaiTaiKhoan = new Quyen(user.IDQuyen, user.TenQuyen);
             nguoiDung = usr;
         }
         public FormMain(int IDUser)
@@ -52,8 +53,11 @@ namespace QuanLyKho
         {
             UCMainAdministrator frm = new UCMainAdministrator();
             LoadMainPanel(frm);
-            barHeaderItem1.Caption=nguoiDung.Ho.ToUpper()+" "+nguoiDung.Ten.ToUpper()+". Đăng nhập lúc: "+DateTime.Now.ToString("hh:mm:ss tt");
-           
+            barHeaderItem1.Caption=" "+ nguoiDung.LoaiTaiKhoan.TenQuyen+" : "+nguoiDung.Ho.ToUpper()+" "+nguoiDung.Ten.ToUpper()+". Đăng nhập lúc: "+DateTime.Now.ToString("hh:mm:ss tt");
+            if (nguoiDung.LoaiTaiKhoan.IDQuyen != 1)
+            {
+                btnTaiKhoan.Enabled = false;
+            }
         }
 
         private void btnDMLoaiTaiKhoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

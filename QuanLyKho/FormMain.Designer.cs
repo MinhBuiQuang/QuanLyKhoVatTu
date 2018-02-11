@@ -44,10 +44,7 @@
             this.btnDMLoaiTaiKhoan = new DevExpress.XtraBars.BarButtonItem();
             this.btnDMDonVi = new DevExpress.XtraBars.BarButtonItem();
             this.btnDMLoaiHang = new DevExpress.XtraBars.BarButtonItem();
-
-
-            this.btnNhaCC = new DevExpress.XtraBars.BarButtonItem();
-            this.btnNhaSX = new DevExpress.XtraBars.BarButtonItem();
+         
 
             this.btnNhaCC = new DevExpress.XtraBars.BarButtonItem();
             this.btnNhaSX = new DevExpress.XtraBars.BarButtonItem();

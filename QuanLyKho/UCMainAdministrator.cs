@@ -12,6 +12,7 @@ using System.ComponentModel.DataAnnotations;
 using System.IO;
 using DevExpress.XtraLayout.Helpers;
 using DevExpress.XtraLayout;
+using DevExpress.XtraCharts;
 
 namespace QuanLyKho
 {
@@ -23,6 +24,55 @@ namespace QuanLyKho
 
             gridControl1.DataSource = GetDataSource();
             labelControl.Text = "Xin chào " + FormMain.nguoiDung.Ho + " " + FormMain.nguoiDung.Ten;
+            chartControl1.DataSource = CreateChartData();
+
+            // Specify data members to bind the chart's series template.
+            chartControl1.SeriesDataMember = "Ngày";
+            chartControl1.SeriesTemplate.ArgumentDataMember = "Số sản phẩm bán";
+            chartControl1.SeriesTemplate.ValueDataMembers.AddRange(new string[] { "Value" });
+            
+
+            // Specify the template's name prefix.
+            chartControl1.SeriesNameTemplate.BeginText = "Sản phẩm: ";
+
+            // Dock the chart into its parent, and add it to the current form.
+            chartControl1.Dock = DockStyle.Fill;
+        }
+        private DataTable CreateChartData()
+        {
+            // Create an empty table.
+            DataTable table = new DataTable("Table1");
+
+            // Add three columns to the table.
+            table.Columns.Add("Ngày", typeof(String));
+            table.Columns.Add("Số sản phẩm bán", typeof(String));
+            table.Columns.Add("Value", typeof(Int32));
+
+            // Add data rows to the table.
+            Random rnd = new Random();
+            for(int i = 1; i< 5; i++)
+            {
+
+               table.Rows.Add(new object[] { "Loại " + i, "Dây, cáp điện", rnd.Next(10, 100) 
+            });
+            }
+            for (int i = 1; i < 6; i++)
+            {
+
+                table.Rows.Add(new object[] { "Loại " + i, "Thiết bị tự động", rnd.Next(10, 100) });
+            }
+            for (int i = 1; i < 4; i++)
+            {
+
+                table.Rows.Add(new object[] { "Loại " + i, "Cầu dao, cầu chì, sứ xuyên", rnd.Next(10, 100) });
+            }
+            for (int i = 1; i < 6; i++)
+            {
+
+                table.Rows.Add(new object[] { "Loại " + i, "Đầu cốt các loại", rnd.Next(10, 100) });
+            }
+
+            return table;
         }
         static List<QuickReport> GetDataSource()
         {
