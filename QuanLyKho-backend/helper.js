@@ -20,12 +20,12 @@ let login = (username, password, callback) => {
 let hanghoa=()=>{
     const pool = require('./db')();
     pool.request()
-        .execute('sp_HangHoa_Select')
+        .execute('sp_NhaSanXuat_Select')
         .then(result => {
 
             console.log(result.recordset)
         }).catch(err => {
-            console.log("sp_User_login", err);
+            console.log("sp_NhaCungCap_Select", err);
             callback(err, null)
         }
     );
