@@ -22,6 +22,7 @@ namespace QuanLyKho
             InitializeComponent();
 
             gridControl1.DataSource = GetDataSource();
+            labelControl.Text = "Xin chào " + FormMain.nguoiDung.Ho + " " + FormMain.nguoiDung.Ten;
         }
         static List<QuickReport> GetDataSource()
         {

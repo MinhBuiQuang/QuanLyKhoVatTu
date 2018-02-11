@@ -20,6 +20,7 @@ namespace QuanLyKho
     {
         Thread mainThread;
         const string KEY_REG = "Vidai\\quanlykho";
+        private UserDump user;
         public Login()
         {
             InitializeComponent();
@@ -28,12 +29,12 @@ namespace QuanLyKho
         }
         private void OpenFormMain()
         {
-            Application.Run(new FormMain());
+            Application.Run(new FormMain(user));
         }
         private void btnOK_Click(object sender, EventArgs e)
         {
             UserDAL userDAL = new UserDAL();
-            UserDump user=userDAL.login(txtTaiKhoan.Text, txtMK.Text);
+            user=userDAL.login(txtTaiKhoan.Text, txtMK.Text);
             if (user != null)
             {
                 if (cbSaveInfo.Checked)
@@ -44,6 +45,7 @@ namespace QuanLyKho
                 {
                     removeInfo();
                 }
+                
                 loginCompleted();
             }
             else

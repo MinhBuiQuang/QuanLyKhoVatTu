@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnHome = new DevExpress.XtraBars.BarButtonItem();
@@ -240,8 +239,11 @@
             // 
             // barHeaderItem1
             // 
+            this.barHeaderItem1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.barHeaderItem1.Appearance.Options.UseFont = true;
             this.barHeaderItem1.Caption = "barHeaderItem1";
             this.barHeaderItem1.Id = 23;
+            this.barHeaderItem1.ImageOptions.Image = global::QuanLyKho.Properties.Resources.man_icon;
             this.barHeaderItem1.Name = "barHeaderItem1";
             // 
             // ribbonPage
