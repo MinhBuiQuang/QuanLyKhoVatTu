@@ -91,19 +91,14 @@ namespace QuanLyKho
             FormDMLoaiHang form = new FormDMLoaiHang();
             LoadMainPanel(form);
         }
-<<<<<<< HEAD
 	
 	private void btnXuatKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FormXuatKho frm = new FormXuatKho();
             LoadMainPanel(frm);
 	}
-        
-	private void btnQLKhachHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-=======
 
         private void btnQLKhachHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
->>>>>>> 28306c2502caad9e14b06684bd045eb55c790c47
         {
             FormQLDSKhachHang hihi = new FormQLDSKhachHang();
             LoadMainPanel(hihi);
@@ -118,11 +113,7 @@ namespace QuanLyKho
         private void btnNhaSX_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FormQLDSNhaSanXuat hihi = new FormQLDSNhaSanXuat();
-<<<<<<< HEAD
             LoadMainPanel(hihi);	    
-=======
-            LoadMainPanel(hihi);
->>>>>>> 28306c2502caad9e14b06684bd045eb55c790c47
         }
     }
 }

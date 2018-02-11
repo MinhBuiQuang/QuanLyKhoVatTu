@@ -33,7 +33,7 @@
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnHome = new DevExpress.XtraBars.BarButtonItem();
             this.btnTrangChu = new DevExpress.XtraBars.BarButtonItem();
-            this.btnXuatKho = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.btnQLCongNo = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
@@ -44,11 +44,6 @@
             this.btnDMLoaiTaiKhoan = new DevExpress.XtraBars.BarButtonItem();
             this.btnDMDonVi = new DevExpress.XtraBars.BarButtonItem();
             this.btnDMLoaiHang = new DevExpress.XtraBars.BarButtonItem();
-
-
-            this.btnNhaCC = new DevExpress.XtraBars.BarButtonItem();
-            this.btnNhaSX = new DevExpress.XtraBars.BarButtonItem();
-
             this.btnNhaCC = new DevExpress.XtraBars.BarButtonItem();
             this.btnNhaSX = new DevExpress.XtraBars.BarButtonItem();
             this.btnBaoCao = new DevExpress.XtraBars.BarButtonItem();
@@ -81,7 +76,7 @@
             this.ribbonControl.ExpandCollapseItem,
             this.btnHome,
             this.btnTrangChu,
-            this.btnXuatKho,
+            this.barButtonItem1,
             this.btnQLCongNo,
             this.barButtonItem3,
             this.barButtonItem4,
@@ -129,14 +124,13 @@
             this.btnTrangChu.Name = "btnTrangChu";
             this.btnTrangChu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTrangChu_ItemClick);
             // 
-            // btnXuatKho
+            // barButtonItem1
             // 
-            this.btnXuatKho.Caption = "Xuất kho";
-            this.btnXuatKho.Id = 54;
-            this.btnXuatKho.ImageOptions.LargeImage = global::QuanLyKho.Properties.Resources.Door_Out_512;
-            this.btnXuatKho.LargeWidth = 80;
-            this.btnXuatKho.Name = "btnXuatKho";
-            this.btnXuatKho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXuatKho_ItemClick);
+            this.barButtonItem1.Caption = "Xuất kho";
+            this.barButtonItem1.Id = 54;
+            this.barButtonItem1.ImageOptions.LargeImage = global::QuanLyKho.Properties.Resources.Door_Out_512;
+            this.barButtonItem1.LargeWidth = 80;
+            this.barButtonItem1.Name = "barButtonItem1";
             // 
             // btnQLCongNo
             // 
@@ -235,7 +229,6 @@
             this.btnNhaSX.Name = "btnNhaSX";
             this.btnNhaSX.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhaSX_ItemClick);
             // 
-	    // // btnBaoCao
             // btnBaoCao
             // 
             this.btnBaoCao.Caption = "Báo cáo";
@@ -265,7 +258,7 @@
             // 
             this.ribbonPageGroup.AllowTextClipping = false;
             this.ribbonPageGroup.ItemLinks.Add(this.btnTrangChu);
-            this.ribbonPageGroup.ItemLinks.Add(this.btnXuatKho);
+            this.ribbonPageGroup.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup.Name = "ribbonPageGroup";
             this.ribbonPageGroup.ShowCaptionButton = false;
@@ -322,7 +315,7 @@
         private DevExpress.XtraBars.BarButtonItem btnTrangChu;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup;
-        private DevExpress.XtraBars.BarButtonItem btnXuatKho;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem btnQLCongNo;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;

@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView();
+            this.components = new System.ComponentModel.Container();
+            this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnHome = new DevExpress.XtraBars.BarButtonItem();
@@ -44,15 +45,7 @@
             this.btnDMLoaiTaiKhoan = new DevExpress.XtraBars.BarButtonItem();
             this.btnDMDonVi = new DevExpress.XtraBars.BarButtonItem();
             this.btnDMLoaiHang = new DevExpress.XtraBars.BarButtonItem();
-
-
-            this.btnNhaCC = new DevExpress.XtraBars.BarButtonItem();
-            this.btnNhaSX = new DevExpress.XtraBars.BarButtonItem();
-
-            this.btnNhaCC = new DevExpress.XtraBars.BarButtonItem();
-            this.btnNhaSX = new DevExpress.XtraBars.BarButtonItem();
             this.btnBaoCao = new DevExpress.XtraBars.BarButtonItem();
-            this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -68,11 +61,10 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 601);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 490);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1178, 40);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1010, 31);
             // 
             // ribbonControl
             // 
@@ -92,16 +84,11 @@
             this.btnDMLoaiTaiKhoan,
             this.btnBaoCao,
             this.btnDMDonVi,
-            this.btnDMLoaiHang,
-            this.btnNhaCC,
-            this.btnNhaSX,
-            this.barHeaderItem1});
+            this.btnDMLoaiHang});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl.MaxItemId = 24;
+            this.ribbonControl.MaxItemId = 17;
             this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl.Name = "ribbonControl";
-            this.ribbonControl.PageHeaderItemLinks.Add(this.barHeaderItem1);
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
@@ -109,7 +96,7 @@
             this.ribbonControl.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(1178, 179);
+            this.ribbonControl.Size = new System.Drawing.Size(1010, 143);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -175,7 +162,6 @@
             this.btnQLKhachHang.ImageOptions.LargeImage = global::QuanLyKho.Properties.Resources.Customer_icon;
             this.btnQLKhachHang.LargeWidth = 80;
             this.btnQLKhachHang.Name = "btnQLKhachHang";
-            this.btnQLKhachHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnQLKhachHang_ItemClick);
             // 
             // btnTaiKhoan
             // 
@@ -195,9 +181,7 @@
             this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnDMLoaiTaiKhoan),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnDMDonVi),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnDMLoaiHang),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnNhaCC),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnNhaSX)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnDMLoaiHang)});
             this.barSubItem1.Name = "barSubItem1";
             // 
             // btnDMLoaiTaiKhoan
@@ -221,21 +205,6 @@
             this.btnDMLoaiHang.Name = "btnDMLoaiHang";
             this.btnDMLoaiHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDMLoaiHang_ItemClick);
             // 
-            // btnNhaCC
-            // 
-            this.btnNhaCC.Caption = "Nhà cung cấp";
-            this.btnNhaCC.Id = 17;
-            this.btnNhaCC.Name = "btnNhaCC";
-            this.btnNhaCC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhaCC_ItemClick);
-            // 
-            // btnNhaSX
-            // 
-            this.btnNhaSX.Caption = "Nhà sản xuất";
-            this.btnNhaSX.Id = 18;
-            this.btnNhaSX.Name = "btnNhaSX";
-            this.btnNhaSX.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhaSX_ItemClick);
-            // 
-	    // // btnBaoCao
             // btnBaoCao
             // 
             this.btnBaoCao.Caption = "Báo cáo";
@@ -243,15 +212,6 @@
             this.btnBaoCao.ImageOptions.LargeImage = global::QuanLyKho.Properties.Resources.Mimetype_log_icon;
             this.btnBaoCao.LargeWidth = 80;
             this.btnBaoCao.Name = "btnBaoCao";
-            // 
-            // barHeaderItem1
-            // 
-            this.barHeaderItem1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.barHeaderItem1.Appearance.Options.UseFont = true;
-            this.barHeaderItem1.Caption = "barHeaderItem1";
-            this.barHeaderItem1.Id = 23;
-            this.barHeaderItem1.ImageOptions.Image = global::QuanLyKho.Properties.Resources.man_icon;
-            this.barHeaderItem1.Name = "barHeaderItem1";
             // 
             // ribbonPage
             // 
@@ -285,21 +245,19 @@
             // mainPanel
             // 
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 179);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mainPanel.Location = new System.Drawing.Point(0, 143);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1178, 422);
+            this.mainPanel.Size = new System.Drawing.Size(1010, 347);
             this.mainPanel.TabIndex = 2;
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 641);
+            this.ClientSize = new System.Drawing.Size(1010, 521);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormMain";
             this.Ribbon = this.ribbonControl;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -336,8 +294,5 @@
         private DevExpress.XtraBars.BarButtonItem btnBaoCao;
         private DevExpress.XtraBars.BarButtonItem btnDMDonVi;
         private DevExpress.XtraBars.BarButtonItem btnDMLoaiHang;
-        private DevExpress.XtraBars.BarButtonItem btnNhaCC;
-        private DevExpress.XtraBars.BarButtonItem btnNhaSX;
-        private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
     }
 }
