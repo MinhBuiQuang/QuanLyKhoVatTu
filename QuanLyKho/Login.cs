@@ -19,6 +19,7 @@ namespace QuanLyKho
     public partial class Login : DevExpress.XtraEditors.XtraForm
     {
         Thread mainThread;
+        const string KEY_REG = "Vidai\\quanlykho";
         public Login()
         {
             InitializeComponent();
@@ -54,15 +55,15 @@ namespace QuanLyKho
         public void saveInfo(string username,string password)
         {
                 //lưu mật khẩu
-                Utilities.WriteReg("Vidai\\quanlykho", "user", txtTaiKhoan.Text);
-                Utilities.WriteReg("Vidai\\quanlykho", "pass", txtMK.Text);
+                Utilities.WriteReg(KEY_REG, "user", txtTaiKhoan.Text);
+                Utilities.WriteReg(KEY_REG, "pass", txtMK.Text);
 
         }
         public void removeInfo()
         {
             //không lưu mật khẩu
-            Utilities.WriteReg("Vidai\\quanlykho", "user", "");
-            Utilities.WriteReg("Vidai\\quanlykho", "pass", "");
+            Utilities.WriteReg(KEY_REG, "user", "");
+            Utilities.WriteReg(KEY_REG, "pass", "");
          }
         public void loginCompleted()
         {
@@ -74,8 +75,8 @@ namespace QuanLyKho
 
         private void Login_Load(object sender, EventArgs e)
         {
-            string struser = Utilities.ReadReg("Vidai\\quanlykho", "user");
-            string strpass = Utilities.ReadReg("Vidai\\quanlykho", "pass");
+            string struser = Utilities.ReadReg(KEY_REG, "user");
+            string strpass = Utilities.ReadReg(KEY_REG, "pass");
 
             if (struser != "" && strpass != "")
             {
