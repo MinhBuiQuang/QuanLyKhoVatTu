@@ -139,11 +139,23 @@
     <Compile Include="FormSubNhapKho.Designer.cs">
       <DependentUpon>FormSubNhapKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSubXuatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSubXuatHang.Designer.cs">
+      <DependentUpon>FormSubXuatHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormXuatBanHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="FormXuatBanHang.Designer.cs">
       <DependentUpon>FormXuatBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormXuatKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormXuatKho.Designer.cs">
+      <DependentUpon>FormXuatKho.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -195,8 +207,14 @@
     <EmbeddedResource Include="FormSubNhapKho.resx">
       <DependentUpon>FormSubNhapKho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSubXuatHang.resx">
+      <DependentUpon>FormSubXuatHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormXuatBanHang.resx">
       <DependentUpon>FormXuatBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXuatKho.resx">
+      <DependentUpon>FormXuatKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -300,6 +318,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\layer-import-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export-button-hi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -153,6 +153,16 @@ namespace QuanLyKho.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap export_button_hi {
+            get {
+                object obj = ResourceManager.GetObject("export-button-hi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fraelbhhhtkccnfzjzvb {
             get {
                 object obj = ResourceManager.GetObject("fraelbhhhtkccnfzjzvb", resourceCulture);

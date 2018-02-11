@@ -133,5 +133,27 @@ namespace DataAccess.DAL
                 throw ex;
             }
         }
+
+        public void XuatKho(int IDUser, int IDKhachHang, string GhiChu, DataTable TableHangHoa)
+        {
+            try
+            {
+                DBConnect db = new DBConnect();
+                SqlParameter dtParam = new SqlParameter("@ListHangHoa", TableHangHoa);
+                dtParam.SqlDbType = SqlDbType.Structured;
+                SqlParameter[] param = new SqlParameter[]
+                {
+                    new SqlParameter("@IDUser", IDUser),
+                    new SqlParameter("@IDKhachHang", IDKhachHang == 0 ? DBNull.Value : (object)IDKhachHang),
+                    new SqlParameter("@GhiChu", GhiChu),
+                    dtParam
+                };
+                db.ExecuteNonQuery("sp_HangHoa_TaoHoaDon", param);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

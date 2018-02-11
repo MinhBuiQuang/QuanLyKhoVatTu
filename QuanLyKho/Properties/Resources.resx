@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="layer-import-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\layer-import-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="payment-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\payment-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,20 +142,20 @@
   <data name="Edit-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Edit-20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Edit-24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Edit-24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rank-History-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rank-History-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Door_Out-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Door_Out-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Business-Todo-List-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Business-Todo-List-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="material-icons_3-0-1_attach-money_80_0_ecf0f1_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\material-icons_3-0-1_attach-money_80_0_ecf0f1_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Rank-History-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Rank-History-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="material-icons_3-0-1_attach-money_80_0_ecf0f1_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\material-icons_3-0-1_attach-money_80_0_ecf0f1_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fraelbhhhtkccnfzjzvb" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fraelbhhhtkccnfzjzvb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,8 +163,8 @@
   <data name="exit_delete_close_remove_door-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit_delete_close_remove_door-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Edit-24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Edit-24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Business-Todo-List-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Business-Todo-List-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LoginLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoginLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,7 +175,7 @@
   <data name="delete-24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete-24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="layer-import-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\layer-import-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="export-button-hi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\export-button-hi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

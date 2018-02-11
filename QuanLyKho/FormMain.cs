@@ -77,5 +77,11 @@ namespace QuanLyKho
             FormDMLoaiHang form = new FormDMLoaiHang();
             LoadMainPanel(form);
         }
+
+        private void btnXuatKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormXuatKho frm = new FormXuatKho();
+            LoadMainPanel(frm);
+        }
     }
 }
