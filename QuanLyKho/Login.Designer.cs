@@ -36,11 +36,13 @@
             this.btnOK = new DevExpress.XtraEditors.SimpleButton();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.cbSaveInfo = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaiKhoan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMK.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbSaveInfo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureEdit1
@@ -123,6 +125,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.cbSaveInfo);
             this.panelControl1.Controls.Add(this.pictureEdit1);
             this.panelControl1.Controls.Add(this.btnOK);
             this.panelControl1.Controls.Add(this.btnExit);
@@ -137,6 +140,17 @@
             this.panelControl1.Size = new System.Drawing.Size(519, 215);
             this.panelControl1.TabIndex = 7;
             // 
+            // cbSaveInfo
+            // 
+            this.cbSaveInfo.EditValue = true;
+            this.cbSaveInfo.Location = new System.Drawing.Point(252, 131);
+            this.cbSaveInfo.Name = "cbSaveInfo";
+            this.cbSaveInfo.Properties.Caption = "Ghi nhớ đăng nhập";
+            this.cbSaveInfo.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
+            this.cbSaveInfo.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.cbSaveInfo.Size = new System.Drawing.Size(226, 21);
+            this.cbSaveInfo.TabIndex = 7;
+            // 
             // Login
             // 
             this.AcceptButton = this.btnOK;
@@ -149,12 +163,14 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaiKhoan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMK.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbSaveInfo.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -169,5 +185,6 @@
         private DevExpress.XtraEditors.SimpleButton btnOK;
         private DevExpress.XtraEditors.SimpleButton btnExit;
         private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.CheckEdit cbSaveInfo;
     }
 }

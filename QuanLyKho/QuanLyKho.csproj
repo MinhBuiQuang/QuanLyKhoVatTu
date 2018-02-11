@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="DesignClasses\Constant.cs" />
     <Compile Include="DesignClasses\HamChung.cs" />
+    <Compile Include="DesignClasses\Utils.cs" />
     <Compile Include="FormDMDonViTinh.cs">
       <SubType>UserControl</SubType>
     </Compile>
