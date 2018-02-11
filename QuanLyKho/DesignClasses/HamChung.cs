@@ -68,7 +68,7 @@ namespace QuanLyKho.DesignClasses
                 {
                     sb.Append(hashBytes[i].ToString("X2"));
                 }
-                return sb.ToString();
+                return sb.ToString().ToLower();
             }
         }
         private T getObject<T>(DataRow row, List<string> columnsName) where T : new()

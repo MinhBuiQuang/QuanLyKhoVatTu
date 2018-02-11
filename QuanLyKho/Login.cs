@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Threading;
+using DataAccess.DAL;
+using DataAccess.ObjectsDump;
 
 namespace QuanLyKho
 {
@@ -25,6 +27,20 @@ namespace QuanLyKho
             Application.Run(new FormMain());
         }
         private void btnOK_Click(object sender, EventArgs e)
+        {
+            UserDAL userDAL = new UserDAL();
+            UserDump user=userDAL.login(txtTaiKhoan.Text, txtMK.Text);
+            if (user != null)
+            {
+                loginCompleted();
+            }
+            else
+            {
+                MessageBox.Show("Tên tài khoản hoặc mật khẩu không đúng!");
+            }
+            
+        }
+        public void loginCompleted()
         {
             mainThread = new Thread(OpenFormMain);
             mainThread.SetApartmentState(ApartmentState.STA);

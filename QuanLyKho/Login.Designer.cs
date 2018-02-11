@@ -47,29 +47,33 @@
             // 
             this.pictureEdit1.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureEdit1.EditValue = global::QuanLyKho.Properties.Resources.LoginLogo;
-            this.pictureEdit1.Location = new System.Drawing.Point(32, 30);
+            this.pictureEdit1.Location = new System.Drawing.Point(37, 37);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(100, 96);
+            this.pictureEdit1.Properties.ZoomAccelerationFactor = 1D;
+            this.pictureEdit1.Size = new System.Drawing.Size(117, 118);
             this.pictureEdit1.TabIndex = 0;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(152, 49);
+            this.labelControl1.Location = new System.Drawing.Point(177, 60);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(46, 13);
+            this.labelControl1.Size = new System.Drawing.Size(59, 17);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Tài khoản";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(152, 86);
+            this.labelControl2.Location = new System.Drawing.Point(177, 106);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(44, 13);
+            this.labelControl2.Size = new System.Drawing.Size(56, 17);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Mật khẩu";
             // 
@@ -77,27 +81,31 @@
             // 
             this.txtTaiKhoan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTaiKhoan.Location = new System.Drawing.Point(216, 46);
+            this.txtTaiKhoan.Location = new System.Drawing.Point(252, 57);
+            this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(194, 20);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(226, 22);
             this.txtTaiKhoan.TabIndex = 3;
             // 
             // txtMK
             // 
             this.txtMK.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMK.Location = new System.Drawing.Point(216, 83);
+            this.txtMK.Location = new System.Drawing.Point(252, 102);
+            this.txtMK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMK.Name = "txtMK";
-            this.txtMK.Size = new System.Drawing.Size(194, 20);
+            this.txtMK.Properties.PasswordChar = '*';
+            this.txtMK.Size = new System.Drawing.Size(226, 22);
             this.txtMK.TabIndex = 4;
             // 
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.Location = new System.Drawing.Point(216, 134);
+            this.btnOK.Location = new System.Drawing.Point(252, 165);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(74, 23);
+            this.btnOK.Size = new System.Drawing.Size(86, 28);
             this.btnOK.TabIndex = 5;
             this.btnOK.Text = "OK";
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
@@ -106,9 +114,10 @@
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.Location = new System.Drawing.Point(336, 134);
+            this.btnExit.Location = new System.Drawing.Point(392, 165);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(74, 23);
+            this.btnExit.Size = new System.Drawing.Size(86, 28);
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Thoát";
             // 
@@ -123,18 +132,20 @@
             this.panelControl1.Controls.Add(this.txtMK);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(445, 175);
+            this.panelControl1.Size = new System.Drawing.Size(519, 215);
             this.panelControl1.TabIndex = 7;
             // 
             // Login
             // 
             this.AcceptButton = this.btnOK;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(445, 175);
+            this.ClientSize = new System.Drawing.Size(519, 215);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
