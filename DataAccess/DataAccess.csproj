@@ -46,10 +46,16 @@
   <ItemGroup>
     <Compile Include="DAL\DonViTinhDAL.cs" />
     <Compile Include="DAL\HangHoaDAL.cs" />
+    <Compile Include="DAL\KhachHangDAL.cs" />
     <Compile Include="DAL\LoaiHangDAL.cs" />
+    <Compile Include="DAL\NhaCungCapDAL.cs" />
+    <Compile Include="DAL\NhaSanXuatDAL.cs" />
     <Compile Include="DAL\QuyenDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="DBConnect.cs" />
+    <Compile Include="ObjectsDump\KhachHangDump.cs" />
+    <Compile Include="ObjectsDump\NhaCungCapDump.cs" />
+    <Compile Include="ObjectsDump\NhaSanXuatDump.cs" />
     <Compile Include="ObjectsDump\UserDump.cs" />
     <Compile Include="Objects\ChiTietHoaDon.cs" />
     <Compile Include="Objects\DonViTinh.cs" />

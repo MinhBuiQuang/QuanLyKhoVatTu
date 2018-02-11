@@ -1,8 +1,9 @@
 const db = require('./db')
 setTimeout(() => {
     setupServer()
-}, 2000);
+}, 1000);
 let setupServer = () => {
+
     let app = require('express')();
     let server = require('http').Server(app);
     let io = require('socket.io')(server);
@@ -16,14 +17,17 @@ let setupServer = () => {
     app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
         extended: true
     }));
-    app.use(function (req, res, next) {
-        let token = req.headers["token"];
-        if (token) {
-            return next();
-        } else {
-            res.status(403).send("Token not provided");
-        }
-    });
+    io.on('connection',(client)=>{
+        console.log("connect")
+    })
+    // app.use(function (req, res, next) {
+    //     let token = req.headers["token"];
+    //     if (token) {
+    //         return next();
+    //     } else {
+    //         res.status(403).send("Token not provided");
+    //     }
+    // });
     const SHAKEY = "ai231']ơ][ươ;ơ;ơ;ưsjdljas$%^";
 
     app.post('/login', (req, res) => {
@@ -37,12 +41,16 @@ let setupServer = () => {
         });
 
     });
+    helper.hanghoa()
+    app.get('/',(req,res)=>{
+        console.log("hi")
+        res.sendFile(__dirname + '/index.html');
+    });
     app.get('/user', (req, res) => {
         let token = req.headers["token"];
         let user = verifyToken(token)
         res.status(user ? 200 : 403).send(user)
     });
-    helper.hanghoa()
     let verifyToken = (token) => {
         try {
             let decode = jwt.verify(token, SHAKEY);

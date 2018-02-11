@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using DevExpress.LookAndFeel;
 using QuanLyKho.DesignClasses;
 using DataAccess.Objects;
+using DataAccess.ObjectsDump;
 
 namespace QuanLyKho
 {
@@ -21,7 +22,18 @@ namespace QuanLyKho
         {
             InitializeComponent();
             Constant.ChangeDevexpressTheme();
-            nguoiDung.IDUser = 1;
+            
+        }
+        public FormMain(UserDump user)
+        {
+            InitializeComponent();
+            Constant.ChangeDevexpressTheme();
+            User usr = new User();
+            usr.IDUser = user.IDUser;
+            usr.Username = user.Username;
+            usr.Ho = user.Ho;
+            usr.Ten = user.Ten;
+            nguoiDung = usr;
         }
         public FormMain(int IDUser)
         {
@@ -40,6 +52,8 @@ namespace QuanLyKho
         {
             UCMainAdministrator frm = new UCMainAdministrator();
             LoadMainPanel(frm);
+            barHeaderItem1.Caption=nguoiDung.Ho.ToUpper()+" "+nguoiDung.Ten.ToUpper()+". Đăng nhập lúc: "+DateTime.Now.ToString("hh:mm:ss tt");
+           
         }
 
         private void btnDMLoaiTaiKhoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -77,11 +91,29 @@ namespace QuanLyKho
             FormDMLoaiHang form = new FormDMLoaiHang();
             LoadMainPanel(form);
         }
-
-        private void btnXuatKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+	
+	private void btnXuatKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FormXuatKho frm = new FormXuatKho();
             LoadMainPanel(frm);
+	}
+        
+	private void btnQLKhachHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormQLDSKhachHang hihi = new FormQLDSKhachHang();
+            LoadMainPanel(hihi);
+        }
+
+        private void btnNhaCC_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormQLDSNhaCungCap hihi = new FormQLDSNhaCungCap();
+            LoadMainPanel(hihi);
+        }
+
+        private void btnNhaSX_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormQLDSNhaSanXuat hihi = new FormQLDSNhaSanXuat();
+            LoadMainPanel(hihi);	    
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using DataAccess.Objects;
 using DataAccess.ObjectsDump;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -101,6 +102,54 @@ namespace DataAccess.DAL
                 throw ex;
             }
 
+        }
+        public UserDump login(string username,string password)
+        {
+            DataTable dt = new DataTable();
+            DBConnect db = new DBConnect();
+            UserDump userDump = null ;
+            try
+            {
+                SqlParameter[] param = new SqlParameter[]
+                {
+                    new SqlParameter("@Username", username),
+                    new SqlParameter("@Password",  this.CreateMD5(password)),
+                 
+
+                };
+               dt= db.ExecuteDataSet("sp_User_Login", param).Tables[0];
+                if (dt.Rows.Count > 0)
+                {
+
+
+                    String JSONresult = JsonConvert.SerializeObject(dt);
+
+                    userDump = JsonConvert.DeserializeObject<List<UserDump>>(JSONresult)[0];
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return userDump;
+
+        }
+        private string CreateMD5(string input)
+        {
+            // Use input string to calculate MD5 hash
+            using (System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create())
+            {
+                byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+                // Convert the byte array to hexadecimal string
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("X2"));
+                }
+                return sb.ToString().ToLower();
+            }
         }
     }
 }

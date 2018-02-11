@@ -35,25 +35,25 @@
   <ItemGroup>
     <Reference Include="Accessibility" />
     <Reference Include="DevExpress.BonusSkins.v17.1" />
-    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.DataAccess.v17.1.UI, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Dashboard.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Dashboard.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v17.1" />
-    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Images.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v17.1" />
     <Reference Include="DevExpress.Sparkline.v17.1.Core" />
-    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v17.1" />
     <Reference Include="DevExpress.Printing.v17.1.Core" />
-    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="DesignClasses\Constant.cs" />
     <Compile Include="DesignClasses\HamChung.cs" />
+    <Compile Include="DesignClasses\Utils.cs" />
     <Compile Include="FormDMDonViTinh.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -109,11 +110,29 @@
     <Compile Include="FormQLDMTaiKhoan.Designer.cs">
       <DependentUpon>FormQLDMTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormQLDSKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormQLDSKhachHang.Designer.cs">
+      <DependentUpon>FormQLDSKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQLDSNhaCungCap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormQLDSNhaCungCap.Designer.cs">
+      <DependentUpon>FormQLDSNhaCungCap.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQLDSNhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="FormQLDSNhanVien.Designer.cs">
       <DependentUpon>FormQLDSNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQLDSNhaSanXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormQLDSNhaSanXuat.Designer.cs">
+      <DependentUpon>FormQLDSNhaSanXuat.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQLHangHoa.cs">
       <SubType>UserControl</SubType>
@@ -121,11 +140,29 @@
     <Compile Include="FormQLHangHoa.Designer.cs">
       <DependentUpon>FormQLHangHoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormQLKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormQLKhachHang.Designer.cs">
+      <DependentUpon>FormQLKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQLNhaCungCap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormQLNhaCungCap.Designer.cs">
+      <DependentUpon>FormQLNhaCungCap.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQLNhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="FormQLNhanVien.Designer.cs">
       <DependentUpon>FormQLNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQLNhaSanXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormQLNhaSanXuat.Designer.cs">
+      <DependentUpon>FormQLNhaSanXuat.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQLTonKho.cs">
       <SubType>UserControl</SubType>
@@ -192,14 +229,32 @@
     <EmbeddedResource Include="FormQLDMTaiKhoan.resx">
       <DependentUpon>FormQLDMTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormQLDSKhachHang.resx">
+      <DependentUpon>FormQLDSKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLDSNhaCungCap.resx">
+      <DependentUpon>FormQLDSNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormQLDSNhanVien.resx">
       <DependentUpon>FormQLDSNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLDSNhaSanXuat.resx">
+      <DependentUpon>FormQLDSNhaSanXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQLHangHoa.resx">
       <DependentUpon>FormQLHangHoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormQLKhachHang.resx">
+      <DependentUpon>FormQLKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLNhaCungCap.resx">
+      <DependentUpon>FormQLNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormQLNhanVien.resx">
       <DependentUpon>FormQLNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLNhaSanXuat.resx">
+      <DependentUpon>FormQLNhaSanXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQLTonKho.resx">
       <DependentUpon>FormQLTonKho.cs</DependentUpon>

@@ -322,6 +322,7 @@ typings/
 # next.js build output
 .next
 
+.licx
 #####
 # End of core ignore list, below put you custom 'per project' settings (patterns or path)
 #####
