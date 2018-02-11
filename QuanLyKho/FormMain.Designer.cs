@@ -44,11 +44,16 @@
             this.btnDMLoaiTaiKhoan = new DevExpress.XtraBars.BarButtonItem();
             this.btnDMDonVi = new DevExpress.XtraBars.BarButtonItem();
             this.btnDMLoaiHang = new DevExpress.XtraBars.BarButtonItem();
+<<<<<<< HEAD
 
 
             this.btnNhaCC = new DevExpress.XtraBars.BarButtonItem();
             this.btnNhaSX = new DevExpress.XtraBars.BarButtonItem();
 
+=======
+            this.btnNhaCC = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNhaSX = new DevExpress.XtraBars.BarButtonItem();
+>>>>>>> 28306c2502caad9e14b06684bd045eb55c790c47
             this.btnBaoCao = new DevExpress.XtraBars.BarButtonItem();
             this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -233,7 +238,11 @@
             this.btnNhaSX.Name = "btnNhaSX";
             this.btnNhaSX.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhaSX_ItemClick);
             // 
+<<<<<<< HEAD
 	    // // btnBaoCao
+=======
+            // btnBaoCao
+>>>>>>> 28306c2502caad9e14b06684bd045eb55c790c47
             // 
             this.btnBaoCao.Caption = "Báo cáo";
             this.btnBaoCao.Id = 14;
