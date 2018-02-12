@@ -20,12 +20,19 @@ namespace QuanLyKho
         public FormXuatKho()
         {
             InitializeComponent();
-            treeHangHoa.DataSource = GetDataSource();
+            RefreshData();
             dataXuat.Columns.Add("ID", typeof(int));
             dataXuat.Columns.Add("MaHangHoa", typeof(string));
             dataXuat.Columns.Add("IDHangHoa", typeof(int));
             dataXuat.Columns.Add("SoLuong", typeof(float));
             dataXuat.PrimaryKey = new DataColumn[] { dataXuat.Columns["IDHangHoa"] };
+
+
+            lueKhachHang.Properties.DataSource = new KhachHangDAL().getAllKhachHang();
+            lueKhachHang.Properties.DisplayMember = "TenKhachHang";
+            lueKhachHang.Properties.ValueMember = "IDKhachHang";
+            lueKhachHang.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MaKhachHang", "Mã khách"));
+            lueKhachHang.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenKhachHang", "Tên"));
         }
         void windowsUIButtonPanel_ButtonClick(object sender, DevExpress.XtraBars.Docking2010.ButtonEventArgs e)
         {
@@ -39,7 +46,9 @@ namespace QuanLyKho
                     dt.Rows[i]["ID"] = i + 1;
                 }
                 dt.Columns.Remove("MaHangHoa");
-                da.XuatKho(1, 0, "", dt);
+                da.XuatKho(FormMain.nguoiDung.IDUser, lueKhachHang.EditValue == null ? 0 : (int)Convert.ToDecimal(lueKhachHang.EditValue), "", dt);
+                MessageBox.Show("Xuất kho thành công!");
+                RefreshData();
             }
         }
         public DataTable GetDataSource()
@@ -57,6 +66,12 @@ namespace QuanLyKho
 
             }
             return dt;
+        }
+        private void RefreshData()
+        {
+            treeHangHoa.DataSource = GetDataSource();
+            dataXuat = new DataTable();
+            gc.DataSource = dataXuat;
         }
         private void UpdateView()
         {
@@ -108,6 +123,7 @@ namespace QuanLyKho
                 }
                 treeHangHoa.FocusedNode.SetValue(colTonKho, TonKho - soLuong);
             }
+           
         }
 
         private void btnDeleteHoaDon_Click(object sender, EventArgs e)

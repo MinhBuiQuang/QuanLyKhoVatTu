@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="DAL\DonViTinhDAL.cs" />
     <Compile Include="DAL\HangHoaDAL.cs" />
+    <Compile Include="DAL\HoaDonDAL.cs" />
     <Compile Include="DAL\KhachHangDAL.cs" />
     <Compile Include="DAL\LoaiHangDAL.cs" />
     <Compile Include="DAL\NhaCungCapDAL.cs" />

@@ -58,11 +58,11 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup = new DevExpress.XtraLayout.LayoutControlGroup();
             this.itemLabel = new DevExpress.XtraLayout.LayoutControlItem();
             this.itemGrid = new DevExpress.XtraLayout.LayoutControlItem();
             this.windowsUIButtonPanel = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
-            this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl)).BeginInit();
             this.layoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).BeginInit();
@@ -84,10 +84,9 @@
             this.layoutControl.Controls.Add(this.gridSplitContainer1);
             this.layoutControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl.Name = "layoutControl";
             this.layoutControl.Root = this.layoutControlGroup;
-            this.layoutControl.Size = new System.Drawing.Size(1387, 511);
+            this.layoutControl.Size = new System.Drawing.Size(1189, 415);
             this.layoutControl.TabIndex = 1;
             // 
             // labelControl
@@ -101,10 +100,9 @@
             this.labelControl.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.labelControl.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
             this.labelControl.Location = new System.Drawing.Point(40, 0);
-            this.labelControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl.Name = "labelControl";
-            this.labelControl.Padding = new System.Windows.Forms.Padding(0, 4, 15, 7);
-            this.labelControl.Size = new System.Drawing.Size(1307, 43);
+            this.labelControl.Padding = new System.Windows.Forms.Padding(0, 3, 13, 6);
+            this.labelControl.Size = new System.Drawing.Size(1109, 34);
             this.labelControl.StyleController = this.layoutControl;
             this.labelControl.TabIndex = 4;
             this.labelControl.Text = "Danh sách nhân viên";
@@ -112,26 +110,23 @@
             // gridSplitContainer1
             // 
             this.gridSplitContainer1.Grid = this.gCDSNhanVien;
-            this.gridSplitContainer1.Location = new System.Drawing.Point(40, 43);
-            this.gridSplitContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridSplitContainer1.Location = new System.Drawing.Point(40, 34);
             this.gridSplitContainer1.Name = "gridSplitContainer1";
             this.gridSplitContainer1.Panel1.Controls.Add(this.gCDSNhanVien);
-            this.gridSplitContainer1.Size = new System.Drawing.Size(1307, 468);
+            this.gridSplitContainer1.Size = new System.Drawing.Size(1109, 381);
             this.gridSplitContainer1.TabIndex = 5;
             // 
             // gCDSNhanVien
             // 
             this.gCDSNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gCDSNhanVien.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gCDSNhanVien.Location = new System.Drawing.Point(0, 0);
             this.gCDSNhanVien.MainView = this.gVDSNhanVien;
-            this.gCDSNhanVien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gCDSNhanVien.Name = "gCDSNhanVien";
             this.gCDSNhanVien.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnEdit,
             this.btnDelete,
             this.repositoryItemTextEdit1});
-            this.gCDSNhanVien.Size = new System.Drawing.Size(1307, 468);
+            this.gCDSNhanVien.Size = new System.Drawing.Size(1109, 381);
             this.gCDSNhanVien.TabIndex = 2;
             this.gCDSNhanVien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gVDSNhanVien});
@@ -322,6 +317,12 @@
             this.gridColumn14.FieldName = "Ho";
             this.gridColumn14.Name = "gridColumn14";
             // 
+            // gridColumn15
+            // 
+            this.gridColumn15.Caption = "gridColumn15";
+            this.gridColumn15.FieldName = "Ten";
+            this.gridColumn15.Name = "gridColumn15";
+            // 
             // layoutControlGroup
             // 
             this.layoutControlGroup.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -332,7 +333,7 @@
             this.layoutControlGroup.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup.Name = "layoutControlGroup";
             this.layoutControlGroup.Padding = new DevExpress.XtraLayout.Utils.Padding(40, 40, 0, 0);
-            this.layoutControlGroup.Size = new System.Drawing.Size(1387, 511);
+            this.layoutControlGroup.Size = new System.Drawing.Size(1189, 415);
             this.layoutControlGroup.TextVisible = false;
             // 
             // itemLabel
@@ -341,17 +342,17 @@
             this.itemLabel.Location = new System.Drawing.Point(0, 0);
             this.itemLabel.Name = "itemLabel";
             this.itemLabel.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.itemLabel.Size = new System.Drawing.Size(1307, 43);
+            this.itemLabel.Size = new System.Drawing.Size(1109, 34);
             this.itemLabel.TextSize = new System.Drawing.Size(0, 0);
             this.itemLabel.TextVisible = false;
             // 
             // itemGrid
             // 
             this.itemGrid.Control = this.gridSplitContainer1;
-            this.itemGrid.Location = new System.Drawing.Point(0, 43);
+            this.itemGrid.Location = new System.Drawing.Point(0, 34);
             this.itemGrid.Name = "itemGrid";
             this.itemGrid.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.itemGrid.Size = new System.Drawing.Size(1307, 468);
+            this.itemGrid.Size = new System.Drawing.Size(1109, 381);
             this.itemGrid.TextSize = new System.Drawing.Size(0, 0);
             this.itemGrid.TextVisible = false;
             // 
@@ -385,34 +386,27 @@
             this.windowsUIButtonPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.windowsUIButtonPanel.EnableImageTransparency = true;
             this.windowsUIButtonPanel.ForeColor = System.Drawing.Color.White;
-            this.windowsUIButtonPanel.Location = new System.Drawing.Point(0, 511);
-            this.windowsUIButtonPanel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.windowsUIButtonPanel.MaximumSize = new System.Drawing.Size(0, 74);
-            this.windowsUIButtonPanel.MinimumSize = new System.Drawing.Size(70, 74);
+            this.windowsUIButtonPanel.Location = new System.Drawing.Point(0, 415);
+            this.windowsUIButtonPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.windowsUIButtonPanel.MaximumSize = new System.Drawing.Size(0, 60);
+            this.windowsUIButtonPanel.MinimumSize = new System.Drawing.Size(60, 60);
             this.windowsUIButtonPanel.Name = "windowsUIButtonPanel";
-            this.windowsUIButtonPanel.Size = new System.Drawing.Size(1387, 74);
+            this.windowsUIButtonPanel.Size = new System.Drawing.Size(1189, 60);
             this.windowsUIButtonPanel.TabIndex = 5;
             this.windowsUIButtonPanel.Text = "windowsUIButtonPanel";
             this.windowsUIButtonPanel.UseButtonBackgroundImages = false;
             this.windowsUIButtonPanel.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.windowsUIButtonPanel_ButtonClick);
             // 
-            // gridColumn15
-            // 
-            this.gridColumn15.Caption = "gridColumn15";
-            this.gridColumn15.FieldName = "Ten";
-            this.gridColumn15.Name = "gridColumn15";
-            // 
             // FormQLDSNhanVien
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl);
             this.Controls.Add(this.windowsUIButtonPanel);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormQLDSNhanVien";
-            this.Size = new System.Drawing.Size(1387, 585);
+            this.Size = new System.Drawing.Size(1189, 475);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl)).EndInit();
             this.layoutControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).EndInit();

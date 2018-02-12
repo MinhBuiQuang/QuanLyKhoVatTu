@@ -37,6 +37,13 @@ namespace QuanLyKho
             {
 
             }
+            if (e.Button.Properties.Caption == "Lịch sử kho")
+            {
+                this.Controls.Clear();
+                FormLichSuKho frm = new FormLichSuKho();
+                frm.Dock = DockStyle.Fill;
+                this.Controls.Add(frm);
+            }
         }
         public DataTable GetDataSource()
         {

@@ -84,6 +84,8 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.windowsUIButtonPanel = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
+            this.lueKhachHang = new DevExpress.XtraEditors.LookUpEdit();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl)).BeginInit();
             this.layoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gc)).BeginInit();
@@ -98,11 +100,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.itemLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueKhachHang.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl
             // 
             this.layoutControl.AllowCustomization = false;
+            this.layoutControl.Controls.Add(this.lueKhachHang);
             this.layoutControl.Controls.Add(this.gc);
             this.layoutControl.Controls.Add(this.treeHangHoa);
             this.layoutControl.Controls.Add(this.labelControl);
@@ -115,12 +120,12 @@
             // 
             // gc
             // 
-            this.gc.Location = new System.Drawing.Point(697, 36);
+            this.gc.Location = new System.Drawing.Point(697, 60);
             this.gc.MainView = this.gv;
             this.gc.Name = "gc";
             this.gc.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnDeleteHoaDon});
-            this.gc.Size = new System.Drawing.Size(229, 362);
+            this.gc.Size = new System.Drawing.Size(229, 338);
             this.gc.TabIndex = 7;
             this.gc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv});
@@ -211,7 +216,7 @@
             this.treeListColumn14});
             this.treeHangHoa.Cursor = System.Windows.Forms.Cursors.Default;
             this.treeHangHoa.KeyFieldName = "IDHangHoa";
-            this.treeHangHoa.Location = new System.Drawing.Point(42, 36);
+            this.treeHangHoa.Location = new System.Drawing.Point(42, 60);
             this.treeHangHoa.Name = "treeHangHoa";
             this.treeHangHoa.ParentFieldName = "IDParent";
             this.treeHangHoa.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -220,7 +225,7 @@
             this.btnXuatKho,
             this.spinSoLuong});
             this.treeHangHoa.RowHeight = 26;
-            this.treeHangHoa.Size = new System.Drawing.Size(651, 362);
+            this.treeHangHoa.Size = new System.Drawing.Size(651, 338);
             this.treeHangHoa.TabIndex = 6;
             // 
             // colIDHangHoa
@@ -441,7 +446,8 @@
             this.layoutControlGroup.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.itemLabel,
             this.layoutControlItem1,
-            this.layoutControlItem2});
+            this.layoutControlItem2,
+            this.layoutControlItem3});
             this.layoutControlGroup.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup.Name = "layoutControlGroup";
             this.layoutControlGroup.Padding = new DevExpress.XtraLayout.Utils.Padding(40, 40, 0, 0);
@@ -461,18 +467,18 @@
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.treeHangHoa;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 34);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 58);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(655, 366);
+            this.layoutControlItem1.Size = new System.Drawing.Size(655, 342);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.gc;
-            this.layoutControlItem2.Location = new System.Drawing.Point(655, 34);
+            this.layoutControlItem2.Location = new System.Drawing.Point(655, 58);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(233, 366);
+            this.layoutControlItem2.Size = new System.Drawing.Size(233, 342);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -515,6 +521,26 @@
             this.windowsUIButtonPanel.UseButtonBackgroundImages = false;
             this.windowsUIButtonPanel.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.windowsUIButtonPanel_ButtonClick);
             // 
+            // lueKhachHang
+            // 
+            this.lueKhachHang.Location = new System.Drawing.Point(105, 36);
+            this.lueKhachHang.Name = "lueKhachHang";
+            this.lueKhachHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueKhachHang.Properties.NullText = "Chọn khách hàng";
+            this.lueKhachHang.Size = new System.Drawing.Size(821, 20);
+            this.lueKhachHang.StyleController = this.layoutControl;
+            this.lueKhachHang.TabIndex = 8;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.lueKhachHang;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 34);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(888, 24);
+            this.layoutControlItem3.Text = "Khách hàng:";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(60, 13);
+            // 
             // FormXuatKho
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -539,6 +565,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.itemLabel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueKhachHang.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -581,5 +609,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit spinSoLuong;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDeleteHoaDon;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraEditors.LookUpEdit lueKhachHang;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
     }
 }

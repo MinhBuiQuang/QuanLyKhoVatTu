@@ -119,5 +119,11 @@ namespace QuanLyKho
             FormQLDSNhaSanXuat hihi = new FormQLDSNhaSanXuat();
             LoadMainPanel(hihi);	    
         }
+
+        private void btnQLHoaDon_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormQLHoaDon form = new QuanLyKho.FormQLHoaDon();
+            LoadMainPanel(form);
+        }
     }
 }

@@ -134,7 +134,7 @@ namespace DataAccess.DAL
             }
         }
 
-        public void XuatKho(int IDUser, int IDKhachHang, string GhiChu, DataTable TableHangHoa)
+        public void XuatKho(int? IDUser, int IDKhachHang, string GhiChu, DataTable TableHangHoa)
         {
             try
             {
@@ -154,6 +154,21 @@ namespace DataAccess.DAL
             {
                 throw ex;
             }
+        }
+
+        public DataTable LichSuKho()
+        {
+            DataTable dt = new DataTable();
+            DBConnect db = new DBConnect();
+            try
+            {
+                dt = db.ExecuteDataSet("sp_LichSuKho_Select", new SqlParameter[0]).Tables[0];
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return dt;
         }
     }
 }
